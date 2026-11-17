@@ -1,64 +1,83 @@
 # Projekty pogrupowane wg instytucji finansującej.
-# status: "" | completed | "" (puste = nie pokazuj)
-# title_pl: "[tytuł projektu po polsku]"
+# status: ongoing | completed | "" (puste = nie pokazuj)
+# period: okres realizacji, url: link do rejestru (np. baza NCN)
+# Teksty w [nawiasach] to placeholdery do uzupełnienia.
 - funder_pl: Narodowe Centrum Nauki (NCN)
   funder_en: National Science Centre, Poland (NCN)
   short: NCN
   items:
     - program: OPUS 28
-      number: 2024/53/B/NZ9/02200
+      number: 2024/55/B/NZ9/00579
       leader: Anetta Kuczyńska
-      status: ""
-      title_en: Long non-coding RNAs as multifaceted players regulating phytohormones crosstalk and stress signaling pathways in barley
+      period: 24.06.2025 – 23.06.2029
+      url: https://projekty.ncn.gov.pl/?projekt_id=629631
+      status: ongoing
+      title_en: "Long non-coding RNAs as multifaceted players regulating phytohormones crosstalk and stress signaling pathways in barley"
       title_pl: "[tytuł projektu po polsku]"
     - program: OPUS 27
       number: 2024/53/B/NZ9/00756
       leader: Piotr Ogrodowicz
-      status: ""
+      period: 27.01.2025 – 26.01.2029
+      url: https://projekty.ncn.gov.pl/?projekt_id=621735
+      status: ongoing
       title_en: "[full project title]"
       title_pl: "[tytuł projektu po polsku]"
     - program: OPUS 21
       number: 2021/41/B/NZ9/02576
       leader: Krzysztof Mikołajczak
-      status: ""
-      title_en: MicroRNA – important coordinators of barley leaf response to drought via modulation of phytohormones crosstalk
-      title_pl: "[tytuł projektu po polsku]"
+      period: 01.03.2022 – 28.02.2027
+      url: https://projekty.ncn.gov.pl/?projekt_id=519750
+      status: ongoing
+      title_en: "MicroRNA – important coordinators of barley leaf response to drought via modulation of phytohormones crosstalk"
+      title_pl: "MikroRNA - ważne czynniki koordynujące reakcję na suszę w liściu jęczmienia poprzez regulację współdziałania fitohormonów"
     - program: OPUS 21
       number: 2021/41/B/NZ9/02373
       leader: Piotr Ogrodowicz
-      status: ""
+      period: 21.01.2022 – 20.07.2026
+      url: https://projekty.ncn.gov.pl/?projekt_id=522363
+      status: ongoing
       title_en: "[full project title]"
       title_pl: "[tytuł projektu po polsku]"
     - program: OPUS 18
       number: 2019/35/B/NZ9/00208
       leader: Anetta Kuczyńska
-      status: ""
+      period: 27.07.2020 – 26.07.2025
+      url: https://projekty.ncn.gov.pl/?projekt_id=464300
+      status: completed
       title_en: "[full project title]"
       title_pl: "[tytuł projektu po polsku]"
     - program: OPUS 12
       number: 2016/23/B/NZ9/03548
       leader: Anetta Kuczyńska
-      status: ""
-      title_en: Explanation of the hormone crosstalk and its role in shaping the plant architecture in barley (Hordeum vulgare L.)
-      title_pl: "[tytuł projektu po polsku]"
+      period: 06.09.2017 – 05.09.2022
+      url: https://projekty.ncn.gov.pl/?projekt_id=349442
+      status: completed
+      title_en: "Explanation of the hormone crosstalk and its role in shaping the plant architecture in barley (Hordeum vulgare L.)"
+      title_pl: "Wyjaśnianie współdziałania hormonów i jego roli w kształtowaniu architektury roślin jęczmienia (Hordeum vulgare L.)"
     - program: SONATA 12
       number: 2016/23/D/NZ9/00043
       leader: Krzysztof Mikołajczak
-      status: ""
-      title_en: Modulation of genome-wide genes expression of barley flag leaf via combined abiotic stresses
+      period: 10.08.2017 – 09.02.2022
+      url: https://projekty.ncn.gov.pl/?projekt_id=350455
+      status: completed
+      title_en: "Modulation of genome-wide genes expression of barley flag leaf via combined abiotic stresses"
       title_pl: "[tytuł projektu po polsku]"
     - program: SONATA 12
       number: 2016/23/D/NZ9/00042
       leader: Piotr Ogrodowicz
-      status: ""
+      period: 10.08.2017 – 09.02.2022
+      url: https://projekty.ncn.gov.pl/?projekt_id=356124
+      status: completed
       title_en: "[full project title]"
       title_pl: "[tytuł projektu po polsku]"
     - program: OPUS 9
       number: 2015/17/B/NZ9/01481
       leader: Anetta Kuczyńska
-      status: ""
+      period: 20.01.2016 – 19.01.2020
+      url: https://projekty.ncn.gov.pl/?projekt_id=293577
+      status: completed
       title_en: "[full project title]"
-      title_pl: "[tytuł projektu po polsku]"
+      title_pl: "Wpływ stresów abiotycznych na poziom ekspresji genu LTP2 w odniesieniu do lipidomu i fenomu u jęczmienia (Hordeum vulgare L.)"
 
 - funder_pl: Horyzont 2020 – EPPN2020 (dostęp transnarodowy)
   funder_en: Horizon 2020 – EPPN2020 Transnational Access

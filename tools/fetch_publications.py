@@ -133,6 +133,50 @@ def initials(given):
     return "".join(out)
 
 
+UP = "A-ZĄĆĘŁŃÓŚŹŻÄÖÜÉÈÁ"
+NAME_IN_TEXT = re.compile(rf"\b([{UP}][{UP}'’-]+(?:[ -][{UP}][{UP}'’-]+)?),?\s+((?:[{UP}]\.\s?-?)+)")
+
+
+def nice_case(name):
+    """RUTKOWSKI -> Rutkowski, ZWIJACZ-KOZICA -> Zwijacz-Kozica (tylko gdy całość wielkimi literami)."""
+    if name.upper() != name:
+        return name
+    return "-".join(" ".join(w.capitalize() for w in part.split(" ")) for part in name.split("-"))
+
+
+def looks_broken(text):
+    return bool(re.search(r"\d|,|@", text or "")) or len((text or "").split()) > 4
+
+
+def clean_authors(raw):
+    """Zamienia listę autorów z Crossref na (nazwisko, inicjały).
+
+    Niektóre wydawnictwa wpisują do Crossref afiliacje w polach autorów
+    („Museum and Institute of Zoology…, RUTKOWSKI R., …”). Wtedy wyciągamy
+    z tekstu same wzorce NAZWISKO I., a jeśli się nie da – pomijamy autorów.
+    """
+    out, broken = [], False
+    for a in raw:
+        fam, giv, name = a.get("family") or "", a.get("given") or "", a.get("name") or ""
+        if fam and not looks_broken(fam) and not looks_broken(giv):
+            out.append((nice_case(fam.strip()), initials(giv)))
+        elif name and not looks_broken(name):
+            out.append((name.strip(), ""))
+        else:
+            broken = True
+            print(f"  [autorzy z błędem w Crossref] {json.dumps(a, ensure_ascii=False)[:300]}", file=sys.stderr)
+            for text in (giv, fam, name):
+                for f, ini in NAME_IN_TEXT.findall(text):
+                    out.append((nice_case(f.strip()), ini.replace(" ", "")))
+    if broken:
+        seen, uniq = set(), []
+        for f, i in out:
+            if (f, i) not in seen:
+                seen.add((f, i)); uniq.append((f, i))
+        out = uniq
+    return out
+
+
 def crossref(doi):
     import time
     m = None
@@ -149,12 +193,7 @@ def crossref(doi):
     if m is None:
         print(f"  Crossref: brak danych dla {doi}", file=sys.stderr)
         return None
-    authors = []
-    for a in m.get("author", []):
-        if a.get("family"):
-            authors.append((a["family"], initials(a.get("given"))))
-        elif a.get("name"):
-            authors.append((a["name"], ""))
+    authors = clean_authors(m.get("author", []))
     vol, iss = m.get("volume"), m.get("issue")
     pages = (m.get("page") or m.get("article-number") or "").replace("-", "–")
     details = ""

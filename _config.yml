@@ -9,7 +9,7 @@ description: >-
 # Adres strony.
 #  - podgląd na GitHub Pages:  url: "https://<login>.github.io"  baseurl: "/<nazwa-repo>"
 #  - po podpięciu domeny:     url: "https://phenomics.pl"        baseurl: ""
-url: ""
+url: "https://cerealphenomicslab.github.io"   # po podpięciu domeny: "https://phenomics.pl"
 baseurl: ""
 
 default_lang: pl

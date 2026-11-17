@@ -77,8 +77,16 @@ def val(d, *path):
 
 
 def clean(text):
-    text = re.sub(r"<[^>]+>", "", text or "")
-    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+    text = html.unescape(html.unescape(text or ""))
+    text = re.sub(r"<[^>]+>", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+SKIP_TITLE = re.compile(r"^(corrigendum|erratum|correction|retraction)\b", re.I)
+
+
+def tkey(title):
+    return re.sub(r"[^a-z0-9]", "", ascii_fold(title))
 
 
 def norm_doi(doi):
@@ -170,17 +178,36 @@ def main():
         print("Nie pobrano żadnych publikacji – zostawiam poprzednią listę.", file=sys.stderr)
         return 0
 
-    # deduplikacja: DOI, a jeśli go brak – znormalizowany tytuł
-    merged = {}
+    # deduplikacja: ten sam DOI albo bardzo podobny tytuł (rok ±1);
+    # wersja z DOI ma pierwszeństwo
+    from difflib import SequenceMatcher
+    all_works.sort(key=lambda w: w["doi"] is None)
+    kept = []
     for w in all_works:
-        key = w["doi"] or re.sub(r"\W+", "", w["title"].lower())
-        if not key:
+        if not w["title"] or SKIP_TITLE.match(w["title"]):
             continue
-        if key in merged:
-            merged[key]["orcids"].add(w["orcid"])
+        k = tkey(w["title"])
+        dup = None
+        for m in kept:
+            if w["doi"] and m["doi"] == w["doi"]:
+                dup = m
+                break
+            if w["doi"] and m["doi"]:
+                continue  # dwa różne DOI = dwie różne prace
+            short, long_ = sorted((m["_k"], k), key=len)
+            similar = (short == long_
+                       or (len(short) > 40 and long_.startswith(short))
+                       or SequenceMatcher(None, m["_k"], k).ratio() > 0.88)
+            if similar and abs((m["year"] or 0) - (w["year"] or 0)) <= 1:
+                dup = m
+                break
+        if dup:
+            dup["orcids"].add(w["orcid"])
             continue
         w["orcids"] = {w["orcid"]}
-        merged[key] = w
+        w["_k"] = k
+        kept.append(w)
+    merged = {i: w for i, w in enumerate(kept)}
 
     dois = [w["doi"] for w in merged.values() if w["doi"]]
     with ThreadPoolExecutor(max_workers=6) as ex:
@@ -200,6 +227,8 @@ def main():
             "url": None if w["doi"] else w["url"],
             "team_orcids": sorted(w["orcids"]),
         }
+        if SKIP_TITLE.match(item["title"] or ""):
+            continue
         if not item["title"] or not item["year"] or item["year"] < MIN_YEAR:
             continue
         pubs.append(item)

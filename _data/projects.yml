@@ -1,0 +1,116 @@
+# Projekty pogrupowane wg instytucji finansującej.
+# status: ongoing | completed | "" (puste = nie pokazuj)
+# title_pl: tłumaczenie robocze – podmień na oficjalny tytuł z umowy / bazy NCN
+- funder_pl: Narodowe Centrum Nauki (NCN)
+  funder_en: National Science Centre, Poland (NCN)
+  short: NCN
+  items:
+    - program: OPUS 28
+      number: 2024/53/B/NZ9/02200
+      leader: Anetta Kuczyńska
+      status: ongoing
+      title_en: Long non-coding RNAs as multifaceted players regulating phytohormones crosstalk and stress signaling pathways in barley
+      title_pl: Długie niekodujące RNA jako wielofunkcyjne regulatory interakcji fitohormonów i szlaków sygnalizacji stresowej u jęczmienia
+    - program: OPUS 27
+      number: 2024/53/B/NZ9/00756
+      leader: Piotr Ogrodowicz
+      status: ongoing
+      title_en: Dynamics of anthocyanin accumulation and its effect on root and shoot architecture of spring barley under multifactorial stress
+      title_pl: Dynamika akumulacji antocyjanów i jej wpływ na architekturę korzeni i pędów jęczmienia jarego w warunkach stresu wieloczynnikowego
+    - program: OPUS 21
+      number: 2021/41/B/NZ9/02576
+      leader: Krzysztof Mikołajczak
+      status: ""
+      title_en: MicroRNA – important coordinators of barley leaf response to drought via modulation of phytohormones crosstalk
+      title_pl: MikroRNA – ważne koordynatory odpowiedzi liści jęczmienia na suszę poprzez modulację interakcji fitohormonów
+    - program: OPUS 21
+      number: 2021/41/B/NZ9/02373
+      leader: Piotr Ogrodowicz
+      status: ""
+      title_en: Phenological changes in epidermal structures of spring barley under combined biotic and abiotic stress
+      title_pl: Zmiany fenologiczne struktur epidermalnych jęczmienia jarego w warunkach łącznego stresu biotycznego i abiotycznego
+    - program: OPUS 18
+      number: 2019/35/B/NZ9/00208
+      leader: Anetta Kuczyńska
+      status: completed
+      title_en: The role of melatonin in shaping root architecture and drought adaptation of barley via phytohormone crosstalk
+      title_pl: Rola melatoniny w kształtowaniu architektury korzeni i adaptacji jęczmienia do suszy poprzez interakcje fitohormonów
+    - program: OPUS 12
+      number: 2016/23/B/NZ9/03548
+      leader: Anetta Kuczyńska
+      status: completed
+      title_en: Explanation of the hormone crosstalk and its role in shaping the plant architecture in barley (Hordeum vulgare L.)
+      title_pl: Wyjaśnienie interakcji hormonalnych i ich roli w kształtowaniu architektury roślin jęczmienia (Hordeum vulgare L.)
+    - program: SONATA 12
+      number: 2016/23/D/NZ9/00043
+      leader: Krzysztof Mikołajczak
+      status: completed
+      title_en: Modulation of genome-wide genes expression of barley flag leaf via combined abiotic stresses
+      title_pl: Modulacja ekspresji genów w skali całego genomu w liściu flagowym jęczmienia pod wpływem łącznych stresów abiotycznych
+    - program: SONATA 12
+      number: 2016/23/D/NZ9/00042
+      leader: Piotr Ogrodowicz
+      status: completed
+      title_en: The role of the HvGAMYB transcription factor in flowering-time regulation and photoperiod response of barley under drought
+      title_pl: Rola czynnika transkrypcyjnego HvGAMYB w regulacji terminu kwitnienia i reakcji na fotoperiod u jęczmienia w warunkach suszy
+    - program: OPUS 9
+      number: 2015/17/B/NZ9/01481
+      leader: Anetta Kuczyńska
+      status: completed
+      title_en: Effect of abiotic stresses on LTP2 gene expression in relation to the lipidome and phenome of barley
+      title_pl: Wpływ stresów abiotycznych na ekspresję genu LTP2 w odniesieniu do lipidomu i fenomu jęczmienia
+
+- funder_pl: Horyzont 2020 – EPPN2020 (dostęp transnarodowy)
+  funder_en: Horizon 2020 – EPPN2020 Transnational Access
+  short: H2020
+  items:
+    - program: "EPPN2020 · ID 426"
+      number: BARLEYshoot4DRIM
+      leader: Krzysztof Mikołajczak
+      period: 03.2020 – 01.10.2021
+      status: completed
+      title_en: High-throughput phenotyping of barley varieties response to drought for understanding crops adaptation to arid climate
+      title_pl: Wysokoprzepustowe fenotypowanie reakcji odmian jęczmienia na suszę w celu zrozumienia adaptacji roślin do klimatu suchego
+    - program: "EPPN2020 · ID 206"
+      number: FLOWroots
+      leader: Piotr Ogrodowicz
+      period: 09.2018 – 01.04.2021
+      status: completed
+      title_en: Root architecture and development under drought in relation to accelerated flowering in barley
+      title_pl: Architektura i rozwój korzeni w warunkach suszy w powiązaniu z przyspieszonym kwitnieniem jęczmienia
+    - program: "EPPN2020 · ID 154"
+      number: BAIMRoot
+      leader: Krzysztof Mikołajczak
+      period: 01.08.2018 – 20.01.2020
+      status: completed
+      title_en: Drought effects on roots developmental aspects in spring barley population differentiated in the sdw1/denso locus
+      title_pl: Wpływ suszy na rozwój korzeni w populacji jęczmienia jarego zróżnicowanej w locus sdw1/denso
+
+- funder_pl: Ministerstwo Rolnictwa i Rozwoju Wsi
+  funder_en: Ministry of Agriculture and Rural Development
+  short: MRiRW
+  items:
+    - program: Postęp biologiczny 2021–2025 · zad. 14
+      program_en: Biological Progress 2021–2025 · task 14
+      number: ""
+      leader: Anetta Kuczyńska
+      period: 01.01.2021 – 31.12.2025
+      status: completed
+      title_en: Associative studies and molecular determinants of spring barley resistance to environmental stresses
+      title_pl: Badania asocjacyjne i molekularne uwarunkowania odporności jęczmienia jarego na stresy środowiskowe
+    - program: HOR hn-801-8/14 · zad. 106
+      program_en: HOR hn-801-8/14 · task 106
+      number: ""
+      leader: Anetta Kuczyńska
+      period: 01.01.2018 – 31.12.2020
+      status: completed
+      title_en: Effects of drought on the development and architecture of barley root system
+      title_pl: Wpływ suszy na rozwój i architekturę systemu korzeniowego jęczmienia
+    - program: HOR hn-501-19/15 · zad. 88
+      program_en: HOR hn-501-19/15 · task 88
+      number: ""
+      leader: Anetta Kuczyńska
+      period: 01.01.2015 – 31.12.2017
+      status: completed
+      title_en: Pleiotropic effects of Ppd-H1 and Ppd-H2 genes on Fusarium head blight susceptibility and mycotoxin accumulation in spring barley
+      title_pl: Plejotropowe działanie genów Ppd-H1 i Ppd-H2 na podatność na fuzariozę kłosów i akumulację mykotoksyn u jęczmienia jarego

@@ -1,0 +1,17 @@
+# Menu główne. "ref" łączy wersje PL i EN tej samej podstrony.
+pl:
+  - { ref: home,         title: O nas,        url: / }
+  - { ref: research,     title: Badania,      url: /badania/ }
+  - { ref: team,         title: Zespół,       url: /zespol/ }
+  - { ref: publications, title: Publikacje,   url: /publikacje/ }
+  - { ref: projects,     title: Projekty,     url: /projekty/ }
+  - { ref: news,         title: Aktualności,  url: /aktualnosci/ }
+  - { ref: contact,      title: Kontakt,      url: /kontakt/ }
+en:
+  - { ref: home,         title: About,        url: /en/ }
+  - { ref: research,     title: Research,     url: /en/research/ }
+  - { ref: team,         title: Team,         url: /en/team/ }
+  - { ref: publications, title: Publications, url: /en/publications/ }
+  - { ref: projects,     title: Projects,     url: /en/projects/ }
+  - { ref: news,         title: News,         url: /en/news/ }
+  - { ref: contact,      title: Contact,      url: /en/contact/ }

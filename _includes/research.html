@@ -1,0 +1,44 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign c = site.data.content[page.lang] -%}
+<section class="section">
+  <div class="wrap">
+    <div class="prose">
+      {%- for p in c.about %}<p>{{ p }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section section--tint">
+  <div class="wrap">
+    <h2>{{ c.focus_title }}</h2>
+    <ul class="cards">
+      {%- for f in c.focus %}
+      <li class="card"><span class="card__icon">{% include icon.html name=f.icon %}</span><h3>{{ f.title }}</h3><p>{{ f.text }}</p></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>{{ t.methods }}</h2>
+      <ul class="checklist">
+        {%- for m in c.methods %}<li>{{ m }}</li>{% endfor %}
+      </ul>
+      <div class="photo-slot" role="img" aria-label="{{ t.photo_soon }}">{% include wheat.svg %}<span>{{ t.photo_soon }}</span></div>
+    </div>
+    <div>
+      <h2>{{ t.findings }}</h2>
+      <ol class="findings">
+        {%- for f in c.findings %}<li>{{ f }}</li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="section section--tint">
+  <div class="wrap">
+    <h2>{{ t.keywords }}</h2>
+    <ul class="tags">
+      {%- for k in c.keywords %}<li>{{ k }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>

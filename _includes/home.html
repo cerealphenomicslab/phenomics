@@ -1,0 +1,116 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign c = site.data.content[page.lang] -%}
+{%- assign nav = site.data.nav[page.lang] -%}
+{%- assign url_research = nav | where: "ref", "research" | first -%}
+{%- assign url_team = nav | where: "ref", "team" | first -%}
+{%- assign url_pubs = nav | where: "ref", "publications" | first -%}
+{%- assign url_projects = nav | where: "ref", "projects" | first -%}
+{%- assign url_news = nav | where: "ref", "news" | first -%}
+{%- assign url_contact = nav | where: "ref", "contact" | first -%}
+{%- assign n_projects = 0 -%}{%- for f in site.data.projects %}{% assign n_projects = n_projects | plus: f.items.size %}{% endfor -%}
+
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">{% include wheat.svg %}{% include wheat.svg %}{% include wheat.svg %}</div>
+  <div class="wrap hero__inner">
+    <div class="hero__text">
+      <p class="eyebrow eyebrow--light">{{ c.hero_eyebrow }}</p>
+      <h1>{{ c.hero_title }}</h1>
+      <p class="lead">{{ c.hero_lead }}</p>
+      <p class="hero__cta">
+        <a class="btn btn--gold" href="{{ url_research.url | relative_url }}">{{ t.our_research }}</a>
+        <a class="btn btn--ghost" href="{{ url_team.url | relative_url }}">{{ t.meet_team }}</a>
+      </p>
+    </div>
+    <div class="hero__logo">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Cereal Phenomics Lab" width="148" height="200">
+    </div>
+  </div>
+</section>
+
+<section class="section about">
+  <div class="wrap about__grid">
+    <div>
+      <p class="eyebrow">{{ t.team_name }}</p>
+      <h2>{{ c.about_title }}</h2>
+      {%- for p in c.about %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+    </div>
+    <ul class="stats">
+      <li><strong>{{ n_projects }}</strong><span>{{ t.stats_projects }}</span></li>
+      <li><strong>{{ site.data.publications.size }}</strong><span>{{ t.stats_pubs }}</span></li>
+      <li><strong>{{ site.data.team.size }}</strong><span>{{ t.stats_people }}</span></li>
+      <li><strong>{{ site.data.projects.size }}</strong><span>{{ t.stats_funders }}</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>{{ c.focus_title }}</h2>
+      <a class="more" href="{{ url_research.url | relative_url }}">{{ t.our_research }} →</a>
+    </div>
+    <ul class="cards">
+      {%- for f in c.focus %}
+      <li class="card">
+        <span class="card__icon">{% include icon.html name=f.icon %}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>{{ t.latest_news }}</h2>
+      <a class="more" href="{{ url_news.url | relative_url }}">{{ t.all_news }} →</a>
+    </div>
+    {% include news-list.html limit=3 %}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>{{ t.people }}</h2>
+      <a class="more" href="{{ url_team.url | relative_url }}">{{ t.meet_team }} →</a>
+    </div>
+    {% include team-grid.html compact=true %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>{{ t.selected_publications }}</h2>
+      <a class="more" href="{{ url_pubs.url | relative_url }}">{{ t.all_publications }} →</a>
+    </div>
+    {% include pub-list.html limit=3 flat=true %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__inner">
+    <div>
+      <h2>{{ t.collab_title }}</h2>
+      <p>{{ t.collab_text }}</p>
+    </div>
+    <a class="btn btn--gold" href="{{ url_contact.url | relative_url }}">{{ c.collab_cta }}</a>
+  </div>
+</section>
+
+<section class="section shortcuts">
+  <div class="wrap">
+    <h2 class="visually-hidden">{{ t.shortcuts }}</h2>
+    <ul class="shortcuts__list">
+      <li><a href="{{ url_research.url | relative_url }}">{{ url_research.title }}</a></li>
+      <li><a href="{{ url_projects.url | relative_url }}">{{ url_projects.title }}</a></li>
+      <li><a href="{{ url_pubs.url | relative_url }}">{{ url_pubs.title }}</a></li>
+      <li><a href="{{ url_team.url | relative_url }}">{{ url_team.title }}</a></li>
+    </ul>
+  </div>
+</section>

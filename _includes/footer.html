@@ -1,0 +1,37 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign nav = site.data.nav[page.lang] -%}
+{%- assign c = site.contact -%}
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <div class="footer-brand">
+        <span class="footer-brand__badge"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Cereal Phenomics Lab" width="74" height="100"></span>
+        <div>
+          <strong>Cereal Phenomics Lab</strong>
+          <p>{{ t.team_name }}<br>{{ t.department }}<br>{{ t.institute_full }}</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="footer-h">{{ nav.last.title }}</h2>
+      <address>
+        {% if page.lang == 'pl' %}{{ c.street }}{% else %}{{ c.street_en }}{% endif %}<br>
+        {{ c.city }}, {% if page.lang == 'pl' %}{{ c.country_pl }}{% else %}{{ c.country_en }}{% endif %}<br>
+        <a href="tel:{{ c.phone | remove: ' ' }}">{{ c.phone }}</a><br>
+        <a href="mailto:{{ c.email }}">{{ c.email }}</a>
+      </address>
+    </div>
+    <div>
+      <h2 class="footer-h">{{ t.shortcuts }}</h2>
+      <ul class="footer-links">
+        {%- for item in nav offset:1 %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>© {{ site.time | date: '%Y' }} Cereal Phenomics Lab · <a href="{{ c.institute_url }}" target="_blank" rel="noopener">{{ t.institute }}</a></span>
+    <span>{{ t.footer_note }}</span>
+  </div>
+</footer>

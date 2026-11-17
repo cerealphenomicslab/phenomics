@@ -1,0 +1,93 @@
+# Teksty interfejsu w obu językach
+pl:
+  lang_name: Polski
+  switch_label: English
+  team_name: Zespół Fenotypowania i Genotypowania Zbóż
+  department: Zakład Biotechnologii
+  institute: Instytut Genetyki Roślin PAN
+  institute_full: Instytut Genetyki Roślin Polskiej Akademii Nauk
+  skip: Przejdź do treści
+  menu: Menu
+  read_more: Czytaj dalej
+  all_news: Wszystkie aktualności
+  all_publications: Wszystkie publikacje
+  meet_team: Poznaj zespół
+  our_research: Nasze badania
+  leader: Kierownik zespołu
+  phd_student: Doktorantka
+  example: przykład
+  shortcuts: Na skróty
+  latest_news: Aktualności
+  people: Ludzie
+  selected_publications: Wybrane publikacje
+  more_in_scopus: Pełny dorobek w bazie Scopus
+  funder: Źródło finansowania
+  project_leader: Kierownik
+  period: Okres realizacji
+  ongoing: w realizacji
+  completed: zakończony
+  contact_us: Skontaktuj się z nami
+  address: Adres
+  phone: Telefon
+  email: E-mail
+  find_us: Jak do nas trafić
+  collab_title: Współpraca, doktorat, staż?
+  collab_text: Chętnie nawiążemy współpracę naukową i przyjmiemy studentów oraz doktorantów zainteresowanych fenotypowaniem i genetyką zbóż.
+  footer_note: Strona zespołu badawczego Instytutu Genetyki Roślin PAN w Poznaniu.
+  rights: Wszelkie prawa zastrzeżone.
+  methods: Metody i narzędzia
+  findings: Najważniejsze wyniki
+  keywords: Słowa kluczowe
+  members: Członkowie zespołu
+  photo_soon: zdjęcie wkrótce
+  stats_projects: projektów badawczych
+  stats_pubs: wybranych publikacji
+  stats_people: osób w zespole
+  stats_funders: instytucji finansujących
+pl_months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, września, października, listopada, grudnia]
+
+en:
+  lang_name: English
+  switch_label: Polski
+  team_name: Cereal Phenotyping and Genotyping Team
+  department: Department of Biotechnology
+  institute: Institute of Plant Genetics PAS
+  institute_full: Institute of Plant Genetics, Polish Academy of Sciences
+  skip: Skip to content
+  menu: Menu
+  read_more: Read more
+  all_news: All news
+  all_publications: All publications
+  meet_team: Meet the team
+  our_research: Our research
+  leader: Team leader
+  phd_student: PhD student
+  example: example
+  shortcuts: Shortcuts
+  latest_news: News
+  people: People
+  selected_publications: Selected publications
+  more_in_scopus: Full publication record in Scopus
+  funder: Funding
+  project_leader: Principal investigator
+  period: Duration
+  ongoing: ongoing
+  completed: completed
+  contact_us: Get in touch
+  address: Address
+  phone: Phone
+  email: E-mail
+  find_us: How to find us
+  collab_title: Collaboration, PhD, internship?
+  collab_text: We welcome research collaborations as well as students and PhD candidates interested in cereal phenotyping and genetics.
+  footer_note: Research team website, Institute of Plant Genetics PAS, Poznań.
+  rights: All rights reserved.
+  methods: Methods and tools
+  findings: Key findings
+  keywords: Keywords
+  members: Team members
+  photo_soon: photo coming soon
+  stats_projects: research projects
+  stats_pubs: selected publications
+  stats_people: team members
+  stats_funders: funding bodies

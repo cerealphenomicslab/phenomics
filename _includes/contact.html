@@ -1,0 +1,26 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign c = site.contact -%}
+{%- assign leader = site.data.team | where: "leader", true | first -%}
+<section class="section">
+  <div class="wrap contact">
+    <div class="contact__info">
+      <h2>{{ t.address }}</h2>
+      <address>
+        <strong>Cereal Phenomics Lab</strong><br>
+        {{ t.team_name }}<br>
+        {% if page.lang == 'pl' %}{{ c.department_pl }}<br>{{ c.institute_pl }}<br>{{ c.street }}{% else %}{{ c.department_en }}<br>{{ c.institute_en }}<br>{{ c.street_en }}{% endif %}<br>
+        {{ c.city }}, {% if page.lang == 'pl' %}{{ c.country_pl }}{% else %}{{ c.country_en }}{% endif %}
+      </address>
+      <dl class="contact__dl">
+        <div><dt>{{ t.phone }}</dt><dd><a href="tel:{{ c.phone | remove: ' ' }}">{{ c.phone }}</a></dd></div>
+        <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ c.email }}">{{ c.email }}</a></dd></div>
+        <div><dt>{{ t.leader }}</dt><dd>{{ leader.degree }} {{ leader.name }}{% if leader.email != "" %}<br><a href="mailto:{{ leader.email }}">{{ leader.email }}</a>{% endif %}</dd></div>
+      </dl>
+    </div>
+    <div class="contact__map">
+      <h2>{{ t.find_us }}</h2>
+      <iframe title="{{ t.find_us }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q={{ c.map_query | url_encode }}&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>

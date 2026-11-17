@@ -1,0 +1,23 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- for f in site.data.projects %}
+<section class="funder">
+  <h2 class="funder__name"><span class="funder__tag">{{ f.short }}</span>{% if page.lang == 'pl' %}{{ f.funder_pl }}{% else %}{{ f.funder_en }}{% endif %}</h2>
+  <ul class="projects">
+    {%- for p in f.items %}
+    {%- assign prog = p.program -%}{%- if page.lang == 'en' and p.program_en %}{% assign prog = p.program_en %}{% endif %}
+    <li class="project">
+      <div class="project__head">
+        <span class="project__prog">{{ prog }}</span>
+        {%- if p.number != "" %}<span class="project__num">{{ p.number }}</span>{% endif %}
+        {%- if p.status == 'ongoing' %}<span class="badge badge--on">{{ t.ongoing }}</span>{% elsif p.status == 'completed' %}<span class="badge">{{ t.completed }}</span>{% endif %}
+      </div>
+      <h3 class="project__title">{% if page.lang == 'pl' %}{{ p.title_pl }}{% else %}{{ p.title_en }}{% endif %}</h3>
+      <dl class="project__meta">
+        <div><dt>{{ t.project_leader }}</dt><dd>{{ p.leader }}</dd></div>
+        {%- if p.period %}<div><dt>{{ t.period }}</dt><dd>{{ p.period }}</dd></div>{% endif %}
+      </dl>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}

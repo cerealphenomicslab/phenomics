@@ -1,0 +1,29 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign people = site.data.team -%}
+{%- if include.limit %}{% assign people = people | slice: 0, include.limit %}{% endif -%}
+<ul class="team-grid{% if include.compact %} team-grid--compact{% endif %}">
+  {%- for p in people %}
+  {%- assign role = p.role_pl -%}{%- if page.lang == 'en' %}{% assign role = p.role_en %}{% endif %}
+  <li class="person{% if p.leader and include.compact == nil %} person--leader{% endif %}">
+    <div class="person__photo">
+      {%- if p.photo != "" and p.photo %}
+      <img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy">
+      {%- else %}
+      <span class="person__initials" aria-hidden="true">{{ p.initials }}</span>
+      {%- endif %}
+    </div>
+    <div class="person__body">
+      {%- if role != "" %}<p class="person__role">{{ role }}</p>{% endif %}
+      <h3 class="person__name">{% if p.degree != "" %}<span class="person__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}</h3>
+      {%- unless include.compact %}
+      {%- if p.email != "" or p.orcid != "" %}
+      <p class="person__links">
+        {%- if p.email != "" %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+        {%- if p.orcid != "" %}<a href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+      </p>
+      {%- endif %}
+      {%- endunless %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

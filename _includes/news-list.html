@@ -1,0 +1,18 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign items = site.data.news -%}
+{%- if include.limit %}{% assign items = items | slice: 0, include.limit %}{% endif -%}
+<ul class="news-grid">
+  {%- for n in items %}
+  <li class="news-card">
+    <div class="news-card__img{% if n.image %} has-img{% endif %}">
+      {%- if n.image %}<img src="{{ '/assets/img/news/' | append: n.image | relative_url }}" alt="" loading="lazy">{% else %}{% include wheat.svg %}{% endif %}
+    </div>
+    <div class="news-card__body">
+      <p class="news-card__date"><time datetime="{{ n.date | date: '%Y-%m-%d' }}">{% include date.html d=n.date %}</time>{% if n.placeholder %} <span class="badge badge--ph">{{ t.example }}</span>{% endif %}</p>
+      <h3 class="news-card__title">{% if page.lang == 'pl' %}{{ n.title_pl }}{% else %}{{ n.title_en }}{% endif %}</h3>
+      <p>{% if page.lang == 'pl' %}{{ n.text_pl }}{% else %}{{ n.text_en }}{% endif %}</p>
+      {%- if n.link %}<a class="more" href="{{ n.link }}">{{ t.read_more }} →</a>{% endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

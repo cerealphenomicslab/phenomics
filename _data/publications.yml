@@ -1,0 +1,92 @@
+# Publikacje (najnowsze na górze). Członkowie zespołu z listy
+# highlight_authors w _config.yml są automatycznie pogrubiani.
+# verify: true = tytuł do sprawdzenia z oryginałem (patrz BRAKUJACE-INFORMACJE.md)
+- year: 2023
+  authors: Mikołajczak K., Kuczyńska A., Krajewski P., Kempa M., Witaszak N.
+  title: Global proteome profiling revealed the adaptive reprogramming of barley flag leaf to drought and elevated temperature
+  journal: Cells
+  details: "12(13): 1685"
+  doi: 10.3390/cells12131685
+- year: 2023
+  authors: Ogrodowicz P., Wojciechowicz M.K., Kuczyńska A., Krajewski P., Kempa M.
+  title: Effects of growth modification on pollen development in spring barley (Hordeum vulgare L.) genotypes with contrasting drought tolerance
+  journal: Cells
+  details: "12(12): 1656"
+  doi: 10.3390/cells12121656
+  verify: true
+- year: 2023
+  authors: Ogrodowicz P., Kuczyńska A., Krajewski P., Kempa M.
+  title: The effects of heading time on yield performance and HvGAMYB expression in spring barley subjected to drought
+  journal: Journal of Applied Genetics
+  details: "64(2): 289–302"
+  doi: 10.1007/s13353-023-00755-x
+- year: 2023
+  authors: Mikołajczak K., Kuczyńska A., Krajewski P., Kempa M., Nuc M.
+  title: Transcriptome profiling disclosed the effect of single and combined drought and heat stresses on reprogramming of genes expression in barley flag leaf
+  journal: Frontiers in Plant Science
+  details: "13: 1096685"
+  doi: 10.3389/fpls.2022.1096685
+  verify: true
+- year: 2023
+  authors: Ogrodowicz P., Mikołajczak K., Kempa M., Mokrzycka M., Krajewski P., Kuczyńska A.
+  title: Genome-wide association study of agronomical and root-related traits in spring barley collection grown under field conditions
+  journal: Frontiers in Plant Science
+  details: "14: 1077631"
+  doi: 10.3389/fpls.2023.1077631
+  verify: true
+- year: 2022
+  authors: Mikołajczak K., Kuczyńska A., Ogrodowicz P., Kiełbowicz-Matuk A., Ćwiek-Kupczyńska H., Daszkowska-Golec A., Szarejko I., Surma M., Krajewski P.
+  title: High-throughput sequencing data revealed genotype-specific changes evoked by heat stress in crown tissue of barley sdw1 near-isogenic lines
+  journal: BMC Genomics
+  details: "23: 177"
+  doi: 10.1186/s12864-022-08410-1
+  verify: true
+- year: 2020
+  authors: Mikołajczak K., Ogrodowicz P., Ćwiek-Kupczyńska H., Weigelt-Fischer K., Mothukuri S.R., Junker A., Altmann T., Krystkowiak K., Adamski T., Surma M., Kuczyńska A., Krajewski P.
+  title: "Image phenotyping of spring barley (Hordeum vulgare L.) RIL population under drought: selection of traits and biological interpretation"
+  journal: Frontiers in Plant Science
+  details: "11: 743"
+  doi: 10.3389/fpls.2020.00743
+  verify: true
+- year: 2020
+  authors: Ogrodowicz P., Kuczyńska A., Mikołajczak K., Adamski T., Surma M., Krajewski P., Ćwiek-Kupczyńska H., Kempa M., Rokicki M., Jasińska D.
+  title: Mapping of quantitative trait loci for traits linked to fusarium head blight in barley
+  journal: PLOS ONE
+  details: "15(2): e0222375"
+  doi: 10.1371/journal.pone.0222375
+- year: 2020
+  authors: Piasecka A., Sawikowska A., Kuczyńska A., Ogrodowicz P., Mikołajczak K., Krajewski P., Kachlicki P.
+  title: Phenolic metabolites from barley in contribution to phenome in soil moisture deficit
+  journal: International Journal of Molecular Sciences
+  details: "21: 6032"
+  doi: 10.3390/ijms21176032
+- year: 2019
+  authors: Janiak A., Kwasniewski M., Sowa M., Kuczyńska A., Mikołajczak K., Ogrodowicz P., Szarejko I.
+  title: Insights into barley root transcriptome under mild drought stress with an emphasis on gene expression regulatory mechanisms
+  journal: International Journal of Molecular Sciences
+  details: "20(24): 6139"
+  doi: 10.3390/ijms20246139
+- year: 2019
+  authors: Kuczyńska A., Cardenia V., Ogrodowicz P., Kempa M., Rodriguez-Estrada M.T., Mikołajczak K.
+  title: Effects of multiple abiotic stresses on lipids and sterols profile in barley leaves (Hordeum vulgare L.)
+  journal: Plant Physiology and Biochemistry
+  details: "141: 215–224"
+  doi: 10.1016/j.plaphy.2019.05.033
+- year: 2019
+  authors: Surma M., Kuczyńska A., Mikołajczak K., Ogrodowicz P., Adamski T., Ćwiek-Kupczyńska H., Sawikowska A., Pecio A., Wach D., Józefaciuk G., Łukowska M., Zych J., Krajewski P.
+  title: Barley varieties in semi-controlled and natural conditions – response to water shortage and changing environmental parameters
+  journal: Journal of Agronomy and Crop Science
+  details: "205(3): 295–308"
+  doi: 10.1111/jac.12324
+- year: 2019
+  authors: Rodziewicz P., Chmielewska K., Sawikowska A., Marczak Ł., Łuczak M., Bednarek P., Mikołajczak K., Ogrodowicz P., Kuczyńska A., Krajewski P., Stobiecki M.
+  title: Identification of drought responsive proteins and related proteomic QTLs in barley
+  journal: Journal of Experimental Botany
+  details: "70(10): 2823–2837"
+  doi: 10.1093/jxb/erz075
+- year: 2019
+  authors: Wyka T., Bagniewska-Zadworna A., Kuczyńska A., Mikołajczak K., Ogrodowicz P., Żytkowiak M., Surma M., Adamski T.
+  title: "Drought-induced anatomical modifications of barley (Hordeum vulgare L.) leaves: an allometric perspective"
+  journal: Environmental and Experimental Botany
+  details: "166: 103798"
+  doi: 10.1016/j.envexpbot.2019.103798

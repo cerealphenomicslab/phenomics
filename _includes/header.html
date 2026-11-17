@@ -1,0 +1,37 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign nav = site.data.nav[page.lang] -%}
+{%- assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
+{%- assign home = nav | first -%}
+<a class="skip" href="#main">{{ t.skip }}</a>
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="topbar__inst" href="{{ site.contact.institute_url }}" target="_blank" rel="noopener">{{ t.institute_full }}</a>
+    <nav class="lang" aria-label="Language">
+      <span class="lang__cur" aria-current="true">{% if page.lang == 'pl' %}PL{% else %}EN{% endif %}</span>
+      {%- if alt %}
+      <a class="lang__alt" href="{{ alt.url | relative_url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ t.switch_label }}</a>
+      {%- endif %}
+    </nav>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="{{ home.url | relative_url }}">
+      <img class="brand__logo" src="{{ '/assets/img/emblem.png' | relative_url }}" alt="" width="58" height="48">
+      <span class="brand__text">
+        <span class="brand__name">Cereal Phenomics Lab</span>
+        <span class="brand__sub">{{ t.team_name }}</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__label">{{ t.menu }}</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="{{ t.menu }}">
+      <ul>
+        {%- for item in nav %}
+        <li><a href="{{ item.url | relative_url }}"{% if item.ref == page.ref %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

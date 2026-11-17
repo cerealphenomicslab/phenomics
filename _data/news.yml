@@ -1,0 +1,21 @@
+# Aktualności (najnowsze na górze).
+# placeholder: true -> wpis przykładowy, oznaczony etykietą "przykład"; usuń po dodaniu prawdziwych
+# image: plik w assets/img/news/ (opcjonalnie)
+- date: 2026-11-17
+  placeholder: true
+  title_pl: Startuje nowa strona zespołu
+  title_en: Our new website is live
+  text_pl: Uruchomiliśmy stronę Cereal Phenomics Lab. Znajdziesz tu informacje o naszych badaniach, projektach, publikacjach i członkach zespołu.
+  text_en: The Cereal Phenomics Lab website is now online. Here you will find information about our research, projects, publications and team members.
+- date: 2025-06-01
+  placeholder: true
+  title_pl: Dwa nowe projekty OPUS finansowane przez NCN
+  title_en: Two new OPUS projects funded by the National Science Centre
+  text_pl: Projekty OPUS 27 i OPUS 28 dotyczą długich niekodujących RNA w sygnalizacji stresowej oraz roli antocyjanów w architekturze korzeni i pędów jęczmienia.
+  text_en: The OPUS 27 and OPUS 28 projects address long non-coding RNAs in stress signalling and the role of anthocyanins in barley root and shoot architecture.
+- date: 2025-04-15
+  placeholder: true
+  title_pl: Sezon polowy – fenotypowanie systemu korzeniowego
+  title_en: Field season – root system phenotyping
+  text_pl: Rozpoczynamy kolejny sezon badań polowych z cyfrowym fenotypowaniem korzeni jęczmienia jarego w wysokiej rozdzielczości.
+  text_en: We are starting another field season with high-resolution digital phenotyping of spring barley roots.

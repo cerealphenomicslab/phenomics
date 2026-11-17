@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.default_lang }}">
+<head>
+{% include head.html %}
+</head>
+<body class="page-{{ page.ref }}">
+{% include header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

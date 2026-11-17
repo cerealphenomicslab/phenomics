@@ -1,0 +1,57 @@
+# ------------------------------------------------------------
+#  Cereal Phenomics Lab – konfiguracja strony (Jekyll / GitHub Pages)
+# ------------------------------------------------------------
+title: Cereal Phenomics Lab
+description: >-
+  Cereal Phenotyping and Genotyping Team, Department of Biotechnology,
+  Institute of Plant Genetics, Polish Academy of Sciences, Poznań.
+
+# Adres strony.
+#  - podgląd na GitHub Pages:  url: "https://<login>.github.io"  baseurl: "/<nazwa-repo>"
+#  - po podpięciu domeny:     url: "https://phenomics.pl"        baseurl: ""
+url: ""
+baseurl: ""
+
+default_lang: pl
+
+# Dane kontaktowe wyświetlane w stopce i na stronie Kontakt
+contact:
+  institute_pl: Instytut Genetyki Roślin Polskiej Akademii Nauk
+  institute_en: Institute of Plant Genetics, Polish Academy of Sciences
+  department_pl: Zakład Biotechnologii
+  department_en: Department of Biotechnology
+  street: ul. Strzeszyńska 34
+  street_en: Strzeszyńska 34
+  city: 60-479 Poznań
+  country_pl: Polska
+  country_en: Poland
+  phone: "+48 61 65 50 200"
+  email: office@igr.poznan.pl          # TODO: adres e-mail zespołu / kierownika
+  institute_url: https://www.igr.poznan.pl
+  map_query: "Instytut Genetyki Roślin PAN, Strzeszyńska 34, Poznań"
+
+# Linki zewnętrzne (zostaw puste, aby ukryć)
+links:
+  scopus: ""            # TODO: link do wyszukiwania publikacji zespołu w Scopus
+  google_scholar: ""
+  researchgate: ""
+  orcid_group: ""
+
+# Nazwiska członków zespołu wyróżniane pogrubieniem na liście publikacji
+highlight_authors:
+  - Kuczyńska A.
+  - Mikołajczak K.
+  - Ogrodowicz P.
+  - Kempa M.
+  - Szczepański S.
+  - Michałek M.
+  - Maryniak D.
+
+markdown: kramdown
+exclude:
+  - README.md
+  - BRAKUJACE-INFORMACJE.md
+  - Gemfile
+  - Gemfile.lock
+  - tools/
+  - vendor/

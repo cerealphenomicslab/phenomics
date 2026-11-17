@@ -38,7 +38,7 @@
     </div>
     <ul class="stats">
       <li><strong>{{ n_projects }}</strong><span>{{ t.stats_projects }}</span></li>
-      <li>{%- assign npubs = site.data.publications.size %}{% if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign npubs = site.data.publications_auto.size %}{% endif %}<strong>{{ npubs }}</strong><span>{{ t.stats_pubs }}</span></li>
+      <li>{%- assign npubs = site.data.publications.size %}{% if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign npubs = site.data.publications_auto | where: 'group', 'cpl' %}{% assign npubs = npubs.size %}{% endif %}<strong>{{ npubs }}</strong><span>{{ t.stats_pubs }}</span></li>
       <li><strong>{{ site.data.team.size }}</strong><span>{{ t.stats_people }}</span></li>
       <li><strong>{{ site.data.projects.size }}</strong><span>{{ t.stats_funders }}</span></li>
     </ul>
@@ -89,7 +89,7 @@
       <h2>{{ t.selected_publications }}</h2>
       <a class="more" href="{{ url_pubs.url | relative_url }}">{{ t.all_publications }} →</a>
     </div>
-    {% include pub-list.html limit=3 flat=true %}
+    {% include pub-list.html limit=3 flat=true group='cpl' %}
   </div>
 </section>
 

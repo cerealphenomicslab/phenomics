@@ -51,8 +51,8 @@
   role_en: ""
   email: ""
   orcid: "0000-0001-9701-0771"
-  researchgate: ""
-  scholar: ""
+  researchgate: "https://www.researchgate.net/profile/Sebastian-Szczepanski-2"
+  scholar: "https://scholar.google.com/citations?user=Rz7BfQ8AAAAJ"
   photo: ""
 - name: Martyna Michałek
   degree: mgr
@@ -61,7 +61,7 @@
   role_en: PhD student
   email: ""
   orcid: "0000-0002-9416-9282"
-  researchgate: ""
+  researchgate: "https://www.researchgate.net/profile/Martyna-Bodzak"
   scholar: ""
   photo: ""
 - name: Dominika Maryniak

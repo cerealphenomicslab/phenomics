@@ -8,7 +8,7 @@ numery i kierownicy grantów, daty, tytuły publikacji i projektów oraz dane ko
 ## Teksty (placeholdery)
 1. **Strona główna i „Badania”** (`_data/content.yml`, PL i EN): hasło główne, opis zespołu (2 akapity), 6 obszarów badawczych, metody, najważniejsze wyniki, słowa kluczowe.
 2. **Opisy podstron** pod nagłówkami (pole `lead:` w plikach `badania.html`, `zespol.html` itd. oraz `en/*.html`).
-3. **Angielska nazwa zakładu**: przyjąłem „Department of Cereal Phenomics” (do potwierdzenia) (`_data/i18n.yml`, `_config.yml`).
+3. **Angielska nazwa**: „Cereal Phenomics Team” (ustalone) (`_data/i18n.yml`, `_config.yml`).
 4. **Zaproszenie do współpracy i tekst w stopce** (`_data/i18n.yml` → `collab_title`, `collab_text`, `footer_note`).
 5. **Aktualności**: 3 puste wpisy (`_data/news.yml`).
 6. **Polskie tytuły wszystkich projektów** (`_data/projects.yml` → `title_pl`).
@@ -23,7 +23,7 @@ numery i kierownicy grantów, daty, tytuły publikacji i projektów oraz dane ko
 
 ## Zespół (`_data/team.yml`)
 13. Stanowiska: K. Mikołajczak, P. Ogrodowicz, M. Kempa, S. Szczepański, R. Holewińska.
-14. Indywidualne e-maile. Brakujące profile (`_data/team.yml`): ResearchGate – S. Szczepański, M. Michałek, D. Maryniak; Google Scholar – wszyscy poza K. Mikołajczakiem. Linki RG znalezione automatycznie (A. Kuczyńska, K. Mikołajczak, P. Ogrodowicz, M. Kempa) trzeba sprawdzić.
+14. Indywidualne e-maile. Brakujące profile (`_data/team.yml`): ResearchGate – D. Maryniak; Google Scholar – wszyscy poza K. Mikołajczakiem i S. Szczepańskim. Linki RG znalezione automatycznie (A. Kuczyńska, K. Mikołajczak, P. Ogrodowicz, M. Kempa) trzeba sprawdzić.
 15. Czy dodać A. Aniołę i R. Trzeciak (są na zdjęciu zespołu w serwisie IGR)?
 
 ## Kontakt i inne

@@ -1,0 +1,20 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign auto = site.data.publications_auto -%}
+<section class="section">
+  <div class="wrap">
+  {%- if auto and auto.size > 0 %}
+    <h2 class="pubs__group">{{ t.pubs_cpl }}</h2>
+    <p class="pubs__note">{{ t.pubs_cpl_note }}</p>
+    {% include pub-list.html group='cpl' %}
+    {%- assign other = auto | where: 'group', 'other' -%}
+    {%- if other.size > 0 %}
+    <h2 class="pubs__group pubs__group--other">{{ t.pubs_other }}</h2>
+    <p class="pubs__note">{{ t.pubs_other_note }}</p>
+    {% include pub-list.html group='other' %}
+    {%- endif %}
+  {%- else %}
+    {% include pub-list.html %}
+  {%- endif %}
+  {%- if site.links.scopus != "" %}<p class="center"><a class="btn btn--green" href="{{ site.links.scopus }}" target="_blank" rel="noopener">{{ t.more_in_scopus }}</a></p>{% endif %}
+  </div>
+</section>

@@ -13,7 +13,6 @@
       {%- endif %}
     </div>
     <div class="person__body">
-      {%- if role != "" %}<p class="person__role">{{ role }}</p>{% endif %}
       <h3 class="person__name">{% if p.degree != "" %}<span class="person__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}</h3>
       {%- unless include.compact %}
       {%- if p.email and p.email != "" %}<p class="person__email"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
@@ -24,6 +23,7 @@
         {%- if p.scholar and p.scholar != "" %}<li><a class="prof prof--gs" href="{{ p.scholar }}" target="_blank" rel="noopener" title="Google Scholar">Scholar</a></li>{% endif %}
       </ul>
       {%- endif %}
+      {%- if role != "" %}<p class="person__role">{{ role }}</p>{% endif %}
       {%- endunless %}
     </div>
   </li>

@@ -82,7 +82,7 @@ address { font-style: normal; }
 .site-header { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 80px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
-.brand__logo { width: 58px; height: auto; flex-shrink: 0; }
+.brand__logo { width: auto; height: 52px; flex-shrink: 0; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
 .brand__name { font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; color: var(--green-900); }
 .brand__sub { font-size: .78rem; color: var(--ink-soft); }
@@ -105,7 +105,7 @@ address { font-style: normal; }
 }
 @media (max-width: 520px) {
   .brand__sub { display: none; }
-  .brand__logo { width: 46px; }
+  .brand__logo { height: 44px; }
   .brand__name { font-size: 1.1rem; }
   .topbar__inst { font-size: .75rem; }
 }
@@ -188,7 +188,7 @@ address { font-style: normal; }
 .person__initials { font-family: var(--font-head); font-size: 3rem; font-weight: 600; color: var(--green-700); opacity: .75; }
 .team-grid--compact .person__initials { font-size: 2.2rem; }
 .person__body { padding: 16px 18px 18px; }
-.person__role { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-600); margin: 0 0 4px; }
+.person__role { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-600); margin: 12px 0 0; }
 .person__name { font-size: 1.12rem; margin: 0; }
 .team-grid--compact .person__name { font-size: 1rem; }
 .person__degree { display: block; font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 2px; }
@@ -215,6 +215,9 @@ address { font-style: normal; }
 /* publications */
 .pubs__year { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
 .pubs__year:first-child { border-top: 0; padding-top: 0; }
+.pubs__group { margin-bottom: .2em; }
+.pubs__group--other { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); }
+.pubs__note { color: var(--ink-soft); margin-bottom: 28px; }
 .pubs__y { font-size: 1.8rem; color: var(--gold-600); margin: 0; }
 .pubs .pubs__year:only-child { display: block; }
 .pub-list { list-style: none; display: grid; gap: 22px; }
@@ -292,7 +295,7 @@ address { font-style: normal; }
 .footer-brand strong { color: #fff; font-family: var(--font-head); font-size: 1.2rem; }
 .footer-brand p { margin: 6px 0 0; }
 .footer-brand__badge { background: #fff; border-radius: 12px; padding: 8px 10px; flex-shrink: 0; }
-.footer-brand__badge img { width: 58px; }
+.footer-brand__badge img { width: auto; height: 52px; }
 .footer-h { font-family: var(--font-body); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-300); margin-bottom: 14px; }
 .footer-links { list-style: none; display: grid; gap: 6px; }
 .footer-links a { text-decoration: none; }

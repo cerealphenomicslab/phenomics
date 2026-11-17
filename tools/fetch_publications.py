@@ -217,9 +217,13 @@ def main():
     pubs = []
     for w in merged.values():
         cr = meta.get(w["doi"]) if w["doi"] else None
+        authors_html = mark_team((cr or {}).get("authors") or [], members)
+        n_team = max(authors_html.count("<strong>"), len(w["orcids"]))
         item = {
+            # cpl = co najmniej 2 członków zespołu wśród autorów; other = 1
+            "group": "cpl" if n_team >= 2 else "other",
             "title": (cr or {}).get("title") or w["title"],
-            "authors_html": mark_team((cr or {}).get("authors") or [], members),
+            "authors_html": authors_html,
             "journal": (cr or {}).get("journal") or w["journal"] or "",
             "details": (cr or {}).get("details") or "",
             "year": (cr or {}).get("year") or w["year"],
@@ -237,7 +241,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(pubs, f, ensure_ascii=False, indent=1)
     for p in pubs:
-        print(f"  {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
+        print(f"  {p['group']:5} | {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
     print(f"Zapisano {len(pubs)} publikacji do {os.path.relpath(OUT, ROOT)}"
           + (f" (nieudane ORCID: {', '.join(failed)})" if failed else ""))
     return 0

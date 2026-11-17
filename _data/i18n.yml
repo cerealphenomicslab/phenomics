@@ -21,6 +21,10 @@ pl:
   people: Ludzie
   selected_publications: Wybrane publikacje
   more_in_scopus: Pełny dorobek w bazie Scopus
+  pubs_cpl: Publikacje CPL
+  pubs_cpl_note: Prace z udziałem co najmniej dwóch członków zespołu. Lista aktualizuje się automatycznie na podstawie profili ORCID.
+  pubs_other: Pozostałe publikacje
+  pubs_other_note: Prace z udziałem jednego członka zespołu.
   funder: Źródło finansowania
   project_leader: Kierownik
   period: Okres realizacji
@@ -49,8 +53,8 @@ pl_months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, w
 en:
   lang_name: English
   switch_label: Polski
-  team_name: Department of Cereal Phenomics
-  department: Department of Cereal Phenomics
+  team_name: Cereal Phenomics Team
+  department: Cereal Phenomics Team
   institute: Institute of Plant Genetics PAS
   institute_full: Institute of Plant Genetics, Polish Academy of Sciences
   skip: Skip to content
@@ -68,6 +72,10 @@ en:
   people: People
   selected_publications: Selected publications
   more_in_scopus: Full publication record in Scopus
+  pubs_cpl: CPL publications
+  pubs_cpl_note: Papers co-authored by at least two team members. The list is updated automatically from ORCID profiles.
+  pubs_other: Other publications
+  pubs_other_note: Papers with one team member among the authors.
   funder: Funding
   project_leader: Principal investigator
   period: Duration

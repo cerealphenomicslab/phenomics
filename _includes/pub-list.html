@@ -1,5 +1,5 @@
 {%- assign pubs = site.data.publications -%}
-{%- if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign pubs = site.data.publications_auto %}{% endif -%}
+{%- if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign pubs = site.data.publications_auto %}{% if include.group %}{% assign pubs = pubs | where: 'group', include.group %}{% endif %}{% endif -%}
 {%- if include.limit %}{% assign pubs = pubs | slice: 0, include.limit %}{% endif -%}
 {%- assign groups = pubs | group_by: "year" -%}
 <div class="pubs">

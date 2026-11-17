@@ -1,15 +1,21 @@
-{%- comment -%} Prosta lista (strona główna / lista zapasowa). {%- endcomment -%}
+{%- comment -%} Prosta lista (strona główna / lista zapasowa). flat=true: jedna lista bez podziału na lata. {%- endcomment -%}
 {%- assign pubs = site.data.publications -%}
 {%- if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign pubs = site.data.publications_auto %}{% if include.group %}{% assign pubs = pubs | where: 'group', include.group %}{% endif %}{% endif -%}
 {%- if include.limit %}{% assign pubs = pubs | slice: 0, include.limit %}{% endif -%}
+<div class="pubs{% if include.flat %} pubs--flat{% endif %}">
+{%- if include.flat %}
+  <ol class="pub-list">
+  {%- for p in pubs %}{% include pub-item.html p=p show_year=true %}{% endfor %}
+  </ol>
+{%- else %}
 {%- assign groups = pubs | group_by: "year" -%}
-<div class="pubs">
 {%- for g in groups %}
   <section class="pubs__year">
-    {%- unless include.flat %}<h2 class="pubs__y">{{ g.name }}</h2>{% endunless %}
+    <h2 class="pubs__y">{{ g.name }}</h2>
     <ol class="pub-list">
-    {%- for p in g.items %}{% include pub-item.html p=p show_year=include.flat %}{% endfor %}
+    {%- for p in g.items %}{% include pub-item.html p=p %}{% endfor %}
     </ol>
   </section>
 {%- endfor %}
+{%- endif %}
 </div>

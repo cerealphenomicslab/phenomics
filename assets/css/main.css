@@ -216,16 +216,19 @@ address { font-style: normal; }
 .pubs__year { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
 .pubs__year:first-child { border-top: 0; padding-top: 0; }
 /* publications page: year | CPL | other */
-.pubgrid__head, .pubgrid__row { display: grid; grid-template-columns: 110px minmax(0, 1.5fr) minmax(0, 1fr); gap: 0 40px; }
+.pubgrid__head, .pubgrid__row { display: grid; grid-template-columns: 110px minmax(0, 1.7fr) minmax(0, 1fr); gap: 0 40px; }
 .pubgrid__head { position: sticky; top: 80px; z-index: 5; background: var(--paper); padding: 14px 0; border-bottom: 2px solid var(--green-700); }
 .pubgrid__h { font: 700 .8rem/1.3 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--green-800); }
 .pubgrid__h small { display: block; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-soft); font-size: .8rem; margin-top: 2px; }
 .pubgrid__h--other { color: var(--ink-soft); }
 .pubgrid__row { padding: 28px 0; border-bottom: 1px solid var(--line); }
 .pubgrid__col--other { border-left: 1px solid var(--line); padding-left: 40px; margin-left: -20px; }
-.pubgrid__col--other .pub { border-left-color: #eceeec; }
-.pubgrid__col--other .pub__title { font-size: .95rem; }
+.pubgrid__col--other .pub-list { gap: 12px; }
+.pubgrid__col--other .pub { border-left-color: #eceeec; padding-left: 12px; }
+.pubgrid__col--other .pub__title { font-size: .82rem; font-weight: 600; line-height: 1.35; margin-bottom: 2px; }
 .pubgrid__col--other .pub__title a { color: var(--ink); }
+.pubgrid__col--other .pub__authors { font-size: .76rem; line-height: 1.45; margin: 0; }
+.pubgrid__col--other .pub__meta { font-size: .74rem; line-height: 1.45; }
 .pubgrid__empty { color: var(--line); margin: 0; }
 .pubgrid__mlabel { display: none; }
 @media (max-width: 860px) {

@@ -207,6 +207,8 @@ def main():
     pubs.sort(key=lambda p: (-p["year"], p["title"].lower()))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(pubs, f, ensure_ascii=False, indent=1)
+    for p in pubs:
+        print(f"  {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
     print(f"Zapisano {len(pubs)} publikacji do {os.path.relpath(OUT, ROOT)}"
           + (f" (nieudane ORCID: {', '.join(failed)})" if failed else ""))
     return 0

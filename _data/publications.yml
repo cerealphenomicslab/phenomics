@@ -1,6 +1,6 @@
 # Publikacje (najnowsze na górze). Członkowie zespołu z listy
 # highlight_authors w _config.yml są automatycznie pogrubiani.
-# verify: true = tytuł do sprawdzenia z oryginałem (patrz BRAKUJACE-INFORMACJE.md)
+# verify: true = tytuł do uzupełnienia (placeholder)
 - year: 2023
   authors: Mikołajczak K., Kuczyńska A., Krajewski P., Kempa M., Witaszak N.
   title: Global proteome profiling revealed the adaptive reprogramming of barley flag leaf to drought and elevated temperature
@@ -9,7 +9,7 @@
   doi: 10.3390/cells12131685
 - year: 2023
   authors: Ogrodowicz P., Wojciechowicz M.K., Kuczyńska A., Krajewski P., Kempa M.
-  title: Effects of growth modification on pollen development in spring barley (Hordeum vulgare L.) genotypes with contrasting drought tolerance
+  title: "[tytuł publikacji / publication title]"
   journal: Cells
   details: "12(12): 1656"
   doi: 10.3390/cells12121656
@@ -22,28 +22,28 @@
   doi: 10.1007/s13353-023-00755-x
 - year: 2023
   authors: Mikołajczak K., Kuczyńska A., Krajewski P., Kempa M., Nuc M.
-  title: Transcriptome profiling disclosed the effect of single and combined drought and heat stresses on reprogramming of genes expression in barley flag leaf
+  title: "[tytuł publikacji / publication title]"
   journal: Frontiers in Plant Science
   details: "13: 1096685"
   doi: 10.3389/fpls.2022.1096685
   verify: true
 - year: 2023
   authors: Ogrodowicz P., Mikołajczak K., Kempa M., Mokrzycka M., Krajewski P., Kuczyńska A.
-  title: Genome-wide association study of agronomical and root-related traits in spring barley collection grown under field conditions
+  title: "[tytuł publikacji / publication title]"
   journal: Frontiers in Plant Science
   details: "14: 1077631"
   doi: 10.3389/fpls.2023.1077631
   verify: true
 - year: 2022
   authors: Mikołajczak K., Kuczyńska A., Ogrodowicz P., Kiełbowicz-Matuk A., Ćwiek-Kupczyńska H., Daszkowska-Golec A., Szarejko I., Surma M., Krajewski P.
-  title: High-throughput sequencing data revealed genotype-specific changes evoked by heat stress in crown tissue of barley sdw1 near-isogenic lines
+  title: "[tytuł publikacji / publication title]"
   journal: BMC Genomics
   details: "23: 177"
   doi: 10.1186/s12864-022-08410-1
   verify: true
 - year: 2020
   authors: Mikołajczak K., Ogrodowicz P., Ćwiek-Kupczyńska H., Weigelt-Fischer K., Mothukuri S.R., Junker A., Altmann T., Krystkowiak K., Adamski T., Surma M., Kuczyńska A., Krajewski P.
-  title: "Image phenotyping of spring barley (Hordeum vulgare L.) RIL population under drought: selection of traits and biological interpretation"
+  title: "[tytuł publikacji / publication title]"
   journal: Frontiers in Plant Science
   details: "11: 743"
   doi: 10.3389/fpls.2020.00743

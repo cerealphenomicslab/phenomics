@@ -3,7 +3,7 @@
 # ------------------------------------------------------------
 title: Cereal Phenomics Lab
 description: >-
-  Cereal Phenotyping and Genotyping Team, Department of Biotechnology,
+  Department of Cereal Phenomics,
   Institute of Plant Genetics, Polish Academy of Sciences, Poznań.
 
 # Adres strony.
@@ -18,8 +18,8 @@ default_lang: pl
 contact:
   institute_pl: Instytut Genetyki Roślin Polskiej Akademii Nauk
   institute_en: Institute of Plant Genetics, Polish Academy of Sciences
-  department_pl: Zakład Biotechnologii
-  department_en: Department of Biotechnology
+  department_pl: Zakład Fenomiki Zbóż
+  department_en: Department of Cereal Phenomics
   street: ul. Strzeszyńska 34
   street_en: Strzeszyńska 34
   city: 60-479 Poznań

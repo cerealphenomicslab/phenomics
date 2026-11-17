@@ -7,7 +7,6 @@
       <h2>{{ t.address }}</h2>
       <address>
         <strong>Cereal Phenomics Lab</strong><br>
-        {{ t.team_name }}<br>
         {% if page.lang == 'pl' %}{{ c.department_pl }}<br>{{ c.institute_pl }}<br>{{ c.street }}{% else %}{{ c.department_en }}<br>{{ c.institute_en }}<br>{{ c.street_en }}{% endif %}<br>
         {{ c.city }}, {% if page.lang == 'pl' %}{{ c.country_pl }}{% else %}{{ c.country_en }}{% endif %}
       </address>

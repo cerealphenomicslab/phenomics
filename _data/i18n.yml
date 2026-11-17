@@ -2,8 +2,8 @@
 pl:
   lang_name: Polski
   switch_label: English
-  team_name: Zespół Fenotypowania i Genotypowania Zbóż
-  department: Zakład Biotechnologii
+  team_name: Zakład Fenomiki Zbóż
+  department: Zakład Fenomiki Zbóż
   institute: Instytut Genetyki Roślin PAN
   institute_full: Instytut Genetyki Roślin Polskiej Akademii Nauk
   skip: Przejdź do treści
@@ -31,9 +31,9 @@ pl:
   phone: Telefon
   email: E-mail
   find_us: Jak do nas trafić
-  collab_title: Współpraca, doktorat, staż?
-  collab_text: Chętnie nawiążemy współpracę naukową i przyjmiemy studentów oraz doktorantów zainteresowanych fenotypowaniem i genetyką zbóż.
-  footer_note: Strona zespołu badawczego Instytutu Genetyki Roślin PAN w Poznaniu.
+  collab_title: "[nagłówek zaproszenia do współpracy]"
+  collab_text: "[tekst zaproszenia do współpracy]"
+  footer_note: "[tekst w stopce]"
   rights: Wszelkie prawa zastrzeżone.
   methods: Metody i narzędzia
   findings: Najważniejsze wyniki
@@ -49,8 +49,8 @@ pl_months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, w
 en:
   lang_name: English
   switch_label: Polski
-  team_name: Cereal Phenotyping and Genotyping Team
-  department: Department of Biotechnology
+  team_name: Department of Cereal Phenomics
+  department: Department of Cereal Phenomics
   institute: Institute of Plant Genetics PAS
   institute_full: Institute of Plant Genetics, Polish Academy of Sciences
   skip: Skip to content
@@ -78,9 +78,9 @@ en:
   phone: Phone
   email: E-mail
   find_us: How to find us
-  collab_title: Collaboration, PhD, internship?
-  collab_text: We welcome research collaborations as well as students and PhD candidates interested in cereal phenotyping and genetics.
-  footer_note: Research team website, Institute of Plant Genetics PAS, Poznań.
+  collab_title: "[collaboration call-to-action heading]"
+  collab_text: "[collaboration call-to-action text]"
+  footer_note: "[footer text]"
   rights: All rights reserved.
   methods: Methods and tools
   findings: Key findings

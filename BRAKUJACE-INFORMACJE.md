@@ -1,35 +1,32 @@
 # Czego brakuje na stronie (do uzupełnienia)
 
-Lista rzeczy, których nie było na stronie IGR albo które wymagają potwierdzenia.
-Plik, w którym to się zmienia, podano w nawiasie.
+Teksty, które nie pochodzą ze strony IGR, są na stronie zastąpione placeholderami
+w nawiasach kwadratowych, np. `[opis zespołu – akapit 1]`. Wystarczy je podmienić
+we wskazanych plikach. Na stronie zostały tylko dane źródłowe: nazwiska, stopnie,
+numery i kierownicy grantów, daty, tytuły publikacji i projektów oraz dane kontaktowe IGR.
 
-## Najważniejsze
-1. **Lepsza wersja logo**: najlepiej SVG albo PNG min. 1000 px, w wersji na jasne i ciemne tło (`assets/img/logo.png`, `assets/img/emblem.png`).
-2. **Zdjęcia portretowe członków zespołu**: najlepiej w proporcji 4:5, min. 600×750 px (`assets/img/team/`, pole `photo` w `_data/team.yml`). Na razie są inicjały.
-3. **Zdjęcia do strony głównej i „Badania”**: pole, szklarnia, laboratorium, fenotypowanie korzeni. Na razie jest grafika z kłosem i ramka „zdjęcie wkrótce”. Zdjęcie zespołu z serwisu IGR można wykorzystać po potwierdzeniu praw do niego.
-4. **Prawdziwe aktualności**: 3 obecne wpisy są **przykładowe** (oznaczone czerwoną etykietą „przykład”) (`_data/news.yml`).
-5. **Polska nazwa zespołu**: przyjęłem „Zespół Fenotypowania i Genotypowania Zbóż”; strona IGR po angielsku podaje „Cereal Phenomics Team” (`_data/i18n.yml`).
+## Teksty (placeholdery)
+1. **Strona główna i „Badania”** (`_data/content.yml`, PL i EN): hasło główne, opis zespołu (2 akapity), 6 obszarów badawczych, metody, najważniejsze wyniki, słowa kluczowe.
+2. **Opisy podstron** pod nagłówkami (pole `lead:` w plikach `badania.html`, `zespol.html` itd. oraz `en/*.html`).
+3. **Angielska nazwa zakładu**: przyjąłem „Department of Cereal Phenomics” (do potwierdzenia) (`_data/i18n.yml`, `_config.yml`).
+4. **Zaproszenie do współpracy i tekst w stopce** (`_data/i18n.yml` → `collab_title`, `collab_text`, `footer_note`).
+5. **Aktualności**: 3 puste wpisy (`_data/news.yml`).
+6. **Polskie tytuły wszystkich projektów** (`_data/projects.yml` → `title_pl`).
+7. **Pełne angielskie tytuły 7 projektów** (OPUS 27, OPUS 21 – Ogrodowicz, OPUS 18, SONATA 12 – Ogrodowicz, OPUS 9, FLOWroots, HOR zad. 88) (`title_en`).
+8. **Status projektów NCN** (w realizacji / zakończony) i okresy realizacji (`status`, `period`).
+9. **Tytuły 5 publikacji** oznaczonych `verify: true` (`_data/publications.yml`); DOI są uzupełnione.
+
+## Zdjęcia i grafika
+10. Lepsza wersja logo: SVG albo PNG min. 1000 px (`assets/img/logo.png`, `assets/img/emblem.png`).
+11. Portrety członków zespołu: 4:5, min. 600×750 px (`assets/img/team/`, pole `photo` w `_data/team.yml`).
+12. Zdjęcia pola, laboratorium i fenotypowania na stronę główną i do „Badań”.
 
 ## Zespół (`_data/team.yml`)
-6. Stanowiska (adiunkt, profesor instytutu, specjalista itd.) dla: K. Mikołajczak, P. Ogrodowicz, M. Kempa, S. Szczepański, R. Holewińska.
-7. Indywidualne adresy e-mail i numery ORCID (opcjonalnie: krótkie bio, zainteresowania).
-8. Czy na stronie mają być też **A. Anioła** i **R. Trzeciak** (są na podpisie zdjęcia zespołu w IGR, ale nie ma ich w składzie zespołu)?
-9. Byli członkowie / absolwenci: czy dodać taką sekcję?
+13. Stanowiska: K. Mikołajczak, P. Ogrodowicz, M. Kempa, S. Szczepański, R. Holewińska.
+14. Indywidualne e-maile i ORCID.
+15. Czy dodać A. Aniołę i R. Trzeciak (są na zdjęciu zespołu w serwisie IGR)?
 
-## Kontakt (`_config.yml`, sekcja `contact`)
-10. Adres e-mail zespołu lub kierownika (teraz jest ogólny `office@igr.poznan.pl`) oraz telefon do zespołu, numer pokoju lub budynku.
-
-## Publikacje (`_data/publications.yml`)
-11. Na stronie IGR jest 14 publikacji (2019–2023). Potrzebne nowsze (2024–2026) albo decyzja, że pokazujemy tylko wybrane.
-12. Link do pełnego dorobku (Scopus / Google Scholar / ORCID) (`_config.yml` → `links`).
-13. Tytuły oznaczone `verify: true` (5 pozycji) wpisałem częściowo z pamięci; trzeba je porównać z oryginałem.
-
-## Projekty (`_data/projects.yml`)
-14. **Polskie tytuły projektów to moje tłumaczenia robocze.** Trzeba je podmienić na oficjalne tytuły z umów lub bazy NCN.
-15. Kilka angielskich tytułów (OPUS 27, OPUS 21 Ogrodowicz, OPUS 18, SONATA 12 Ogrodowicz, OPUS 9, FLOWroots, HOR zad. 88) jest skróconych; trzeba wpisać pełne brzmienie.
-16. Okresy realizacji projektów NCN i ich status (w realizacji / zakończony); dla obu OPUS 21 status jest pusty.
-17. Ewentualne inne projekty, współpraca, aparatura, partnerzy.
-
-## Domena i formalności
-18. Domena phenomics.pl: instrukcja podpięcia jest w `README.md`.
-19. Czy IGR PAN wymaga na stronie: deklaracji dostępności, polityki prywatności/cookies, logotypów instytutu i grantodawców (NCN, MRiRW, UE)?
+## Kontakt i inne
+16. E-mail zespołu lub kierownika (teraz jest `office@igr.poznan.pl`), pokój albo budynek (`_config.yml`).
+17. Nowsze publikacje (2024–2026) i link do Scopus / Google Scholar (`_config.yml` → `links`).
+18. Wymogi IGR: deklaracja dostępności, polityka prywatności, logotypy instytutu i grantodawców.

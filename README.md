@@ -1,7 +1,7 @@
 # Cereal Phenomics Lab · strona www
 
-Strona zespołu **Cereal Phenomics Lab** (Zespół Fenotypowania i Genotypowania Zbóż,
-Zakład Biotechnologii, Instytut Genetyki Roślin PAN, Poznań). Strona jest dwujęzyczna:
+Strona zespołu **Cereal Phenomics Lab** (Zakład Fenomiki Zbóż,
+Instytut Genetyki Roślin PAN, Poznań). Strona jest dwujęzyczna:
 polska wersja pod `/`, angielska pod `/en/`.
 
 Strona jest statyczna (Jekyll) i hostowana za darmo na GitHub Pages.

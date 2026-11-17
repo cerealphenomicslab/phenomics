@@ -1,0 +1,17 @@
+{%- assign p = include.p -%}
+{%- if p.authors_html -%}
+  {%- assign authors = p.authors_html -%}
+{%- else -%}
+  {%- assign authors = p.authors -%}
+  {%- for a in site.highlight_authors %}
+    {%- capture strong %}<strong>{{ a }}</strong>{% endcapture -%}
+    {%- assign authors = authors | replace: a, strong -%}
+  {%- endfor %}
+{%- endif %}
+{%- assign link = nil -%}
+{%- if p.doi %}{% assign link = 'https://doi.org/' | append: p.doi %}{% elsif p.url %}{% assign link = p.url %}{% endif %}
+<li class="pub">
+  <p class="pub__title">{% if link %}<a href="{{ link }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+  {%- if authors and authors != "" %}<p class="pub__authors">{{ authors }}</p>{% endif %}
+  <p class="pub__meta">{% if p.journal and p.journal != "" %}<em>{{ p.journal }}</em> {% endif %}{{ p.details }}{% if include.show_year %} · {{ p.year }}{% endif %}{% if p.doi %} · <span class="pub__doi">DOI: {{ p.doi }}</span>{% endif %}</p>
+</li>

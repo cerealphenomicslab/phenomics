@@ -1,3 +1,4 @@
+{%- comment -%} Prosta lista (strona główna / lista zapasowa). {%- endcomment -%}
 {%- assign pubs = site.data.publications -%}
 {%- if site.data.publications_auto and site.data.publications_auto.size > 0 %}{% assign pubs = site.data.publications_auto %}{% if include.group %}{% assign pubs = pubs | where: 'group', include.group %}{% endif %}{% endif -%}
 {%- if include.limit %}{% assign pubs = pubs | slice: 0, include.limit %}{% endif -%}
@@ -7,24 +8,7 @@
   <section class="pubs__year">
     {%- unless include.flat %}<h2 class="pubs__y">{{ g.name }}</h2>{% endunless %}
     <ol class="pub-list">
-    {%- for p in g.items %}
-      {%- if p.authors_html -%}
-        {%- assign authors = p.authors_html -%}
-      {%- else -%}
-        {%- assign authors = p.authors -%}
-        {%- for a in site.highlight_authors %}
-          {%- capture strong %}<strong>{{ a }}</strong>{% endcapture -%}
-          {%- assign authors = authors | replace: a, strong -%}
-        {%- endfor %}
-      {%- endif %}
-      {%- assign link = nil -%}
-      {%- if p.doi %}{% assign link = 'https://doi.org/' | append: p.doi %}{% elsif p.url %}{% assign link = p.url %}{% endif %}
-      <li class="pub">
-        <p class="pub__title">{% if link %}<a href="{{ link }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
-        {%- if authors != "" %}<p class="pub__authors">{{ authors }}</p>{% endif %}
-        <p class="pub__meta">{% if p.journal != "" %}<em>{{ p.journal }}</em> {% endif %}{{ p.details }}{% if include.flat %} · {{ p.year }}{% endif %}{% if p.doi %} · <span class="pub__doi">DOI: {{ p.doi }}</span>{% endif %}</p>
-      </li>
-    {%- endfor %}
+    {%- for p in g.items %}{% include pub-item.html p=p show_year=include.flat %}{% endfor %}
     </ol>
   </section>
 {%- endfor %}

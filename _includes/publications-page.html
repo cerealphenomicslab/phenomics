@@ -3,15 +3,33 @@
 <section class="section">
   <div class="wrap">
   {%- if auto and auto.size > 0 %}
-    <h2 class="pubs__group">{{ t.pubs_cpl }}</h2>
-    <p class="pubs__note">{{ t.pubs_cpl_note }}</p>
-    {% include pub-list.html group='cpl' %}
-    {%- assign other = auto | where: 'group', 'other' -%}
-    {%- if other.size > 0 %}
-    <h2 class="pubs__group pubs__group--other">{{ t.pubs_other }}</h2>
-    <p class="pubs__note">{{ t.pubs_other_note }}</p>
-    {% include pub-list.html group='other' %}
-    {%- endif %}
+    {%- assign years = auto | group_by: "year" -%}
+    <div class="pubgrid">
+      <div class="pubgrid__head" aria-hidden="true">
+        <span></span>
+        <span class="pubgrid__h">{{ t.pubs_cpl }}<small>{{ t.pubs_cpl_note }}</small></span>
+        <span class="pubgrid__h pubgrid__h--other">{{ t.pubs_other }}<small>{{ t.pubs_other_note }}</small></span>
+      </div>
+      {%- for y in years %}
+      {%- assign cpl = y.items | where: "group", "cpl" -%}
+      {%- assign other = y.items | where: "group", "other" -%}
+      <section class="pubgrid__row">
+        <h2 class="pubs__y">{{ y.name }}</h2>
+        <div class="pubgrid__col">
+          <h3 class="pubgrid__mlabel">{{ t.pubs_cpl }}</h3>
+          {%- if cpl.size > 0 %}
+          <ol class="pub-list">{% for p in cpl %}{% include pub-item.html p=p %}{% endfor %}</ol>
+          {%- else %}<p class="pubgrid__empty">—</p>{% endif %}
+        </div>
+        <div class="pubgrid__col pubgrid__col--other">
+          <h3 class="pubgrid__mlabel">{{ t.pubs_other }}</h3>
+          {%- if other.size > 0 %}
+          <ol class="pub-list">{% for p in other %}{% include pub-item.html p=p %}{% endfor %}</ol>
+          {%- else %}<p class="pubgrid__empty">—</p>{% endif %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
   {%- else %}
     {% include pub-list.html %}
   {%- endif %}

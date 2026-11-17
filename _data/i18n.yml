@@ -21,10 +21,10 @@ pl:
   people: Ludzie
   selected_publications: Wybrane publikacje
   more_in_scopus: Pełny dorobek w bazie Scopus
-  pubs_cpl: Publikacje CPL
-  pubs_cpl_note: Prace z udziałem co najmniej dwóch członków zespołu. Lista aktualizuje się automatycznie na podstawie profili ORCID.
+  pubs_cpl: Publikacje Cereal Phenomics Lab
+  pubs_cpl_note: Min. dwóch autorów z zespołu
   pubs_other: Pozostałe publikacje
-  pubs_other_note: Prace z udziałem jednego członka zespołu.
+  pubs_other_note: Jeden autor z zespołu
   funder: Źródło finansowania
   project_leader: Kierownik
   period: Okres realizacji
@@ -72,10 +72,10 @@ en:
   people: People
   selected_publications: Selected publications
   more_in_scopus: Full publication record in Scopus
-  pubs_cpl: CPL publications
-  pubs_cpl_note: Papers co-authored by at least two team members. The list is updated automatically from ORCID profiles.
+  pubs_cpl: Cereal Phenomics Lab publications
+  pubs_cpl_note: At least two team members as authors
   pubs_other: Other publications
-  pubs_other_note: Papers with one team member among the authors.
+  pubs_other_note: One team member as author
   funder: Funding
   project_leader: Principal investigator
   period: Duration

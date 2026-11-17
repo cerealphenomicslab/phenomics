@@ -215,9 +215,26 @@ address { font-style: normal; }
 /* publications */
 .pubs__year { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
 .pubs__year:first-child { border-top: 0; padding-top: 0; }
-.pubs__group { margin-bottom: .2em; }
-.pubs__group--other { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); }
-.pubs__note { color: var(--ink-soft); margin-bottom: 28px; }
+/* publications page: year | CPL | other */
+.pubgrid__head, .pubgrid__row { display: grid; grid-template-columns: 110px minmax(0, 1.5fr) minmax(0, 1fr); gap: 0 40px; }
+.pubgrid__head { position: sticky; top: 80px; z-index: 5; background: var(--paper); padding: 14px 0; border-bottom: 2px solid var(--green-700); }
+.pubgrid__h { font: 700 .8rem/1.3 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--green-800); }
+.pubgrid__h small { display: block; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-soft); font-size: .8rem; margin-top: 2px; }
+.pubgrid__h--other { color: var(--ink-soft); }
+.pubgrid__row { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.pubgrid__col--other { border-left: 1px solid var(--line); padding-left: 40px; margin-left: -20px; }
+.pubgrid__col--other .pub { border-left-color: #eceeec; }
+.pubgrid__col--other .pub__title { font-size: .95rem; }
+.pubgrid__col--other .pub__title a { color: var(--ink); }
+.pubgrid__empty { color: var(--line); margin: 0; }
+.pubgrid__mlabel { display: none; }
+@media (max-width: 860px) {
+  .pubgrid__head { display: none; }
+  .pubgrid__row { grid-template-columns: 1fr; gap: 12px; }
+  .pubgrid__col--other { border-left: 0; padding-left: 0; margin-left: 0; border-top: 1px dashed var(--line); padding-top: 14px; }
+  .pubgrid__mlabel { display: block; font: 700 .72rem/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-600); margin: 0 0 12px; }
+  .pubgrid__col:has(.pubgrid__empty) { display: none; }
+}
 .pubs__y { font-size: 1.8rem; color: var(--gold-600); margin: 0; }
 .pubs .pubs__year:only-child { display: block; }
 .pub-list { list-style: none; display: grid; gap: 22px; }

@@ -14,6 +14,7 @@ import re
 import sys
 import html
 import urllib.request
+import urllib.error
 from concurrent.futures import ThreadPoolExecutor
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,9 +134,20 @@ def initials(given):
 
 
 def crossref(doi):
-    try:
-        m = get_json("https://api.crossref.org/works/" + urllib.request.quote(doi))["message"]
-    except Exception:
+    import time
+    m = None
+    for attempt in range(4):
+        try:
+            m = get_json("https://api.crossref.org/works/" + urllib.request.quote(doi))["message"]
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                break
+            time.sleep(2 * (attempt + 1))
+        except Exception:
+            time.sleep(2 * (attempt + 1))
+    if m is None:
+        print(f"  Crossref: brak danych dla {doi}", file=sys.stderr)
         return None
     authors = []
     for a in m.get("author", []):
@@ -210,7 +222,7 @@ def main():
     merged = {i: w for i, w in enumerate(kept)}
 
     dois = [w["doi"] for w in merged.values() if w["doi"]]
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=3) as ex:
         meta = dict(zip(dois, ex.map(crossref, dois)))
 
     members = team_members()
@@ -241,7 +253,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(pubs, f, ensure_ascii=False, indent=1)
     for p in pubs:
-        print(f"  {p['group']:5} | {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
+        print(f"  {p['group']:5} {p['authors_html'].count('<strong>')}/{len(p['team_orcids'])} | {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
     print(f"Zapisano {len(pubs)} publikacji do {os.path.relpath(OUT, ROOT)}"
           + (f" (nieudane ORCID: {', '.join(failed)})" if failed else ""))
     return 0

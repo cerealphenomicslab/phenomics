@@ -192,7 +192,17 @@ address { font-style: normal; }
 .person__name { font-size: 1.12rem; margin: 0; }
 .team-grid--compact .person__name { font-size: 1rem; }
 .person__degree { display: block; font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 2px; }
-.person__links { margin: 10px 0 0; font-size: .88rem; display: flex; flex-direction: column; gap: 2px; word-break: break-all; }
+.person__email { margin: 8px 0 0; font-size: .88rem; word-break: break-all; }
+.person__profiles { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.prof { display: inline-block; font: 600 .74rem/1 var(--font-body); padding: 6px 9px; border-radius: 6px; text-decoration: none; border: 1px solid currentColor; }
+.prof--orcid { color: #5c7f12; }
+.prof--rg { color: #00a68a; }
+.prof--gs { color: #3b6fd8; }
+.prof:hover { background: currentColor; }
+.prof--orcid:hover, .prof--rg:hover, .prof--gs:hover { color: #fff; }
+.prof--orcid:hover { background: #5c7f12; border-color: #5c7f12; }
+.prof--rg:hover { background: #00a68a; border-color: #00a68a; }
+.prof--gs:hover { background: #3b6fd8; border-color: #3b6fd8; }
 .person--leader { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(180px, 280px) 1fr; }
 .person--leader .person__body { align-self: center; padding: 32px 40px; }
 .person--leader .person__name { font-size: 1.7rem; }

@@ -16,11 +16,13 @@
       {%- if role != "" %}<p class="person__role">{{ role }}</p>{% endif %}
       <h3 class="person__name">{% if p.degree != "" %}<span class="person__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}</h3>
       {%- unless include.compact %}
-      {%- if p.email != "" or p.orcid != "" %}
-      <p class="person__links">
-        {%- if p.email != "" %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
-        {%- if p.orcid != "" %}<a href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
-      </p>
+      {%- if p.email and p.email != "" %}<p class="person__email"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+      {%- if p.orcid != "" or p.researchgate != "" or p.scholar != "" %}
+      <ul class="person__profiles">
+        {%- if p.orcid and p.orcid != "" %}<li><a class="prof prof--orcid" href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noopener" title="ORCID {{ p.orcid }}">ORCID</a></li>{% endif %}
+        {%- if p.researchgate and p.researchgate != "" %}<li><a class="prof prof--rg" href="{{ p.researchgate }}" target="_blank" rel="noopener" title="ResearchGate">ResearchGate</a></li>{% endif %}
+        {%- if p.scholar and p.scholar != "" %}<li><a class="prof prof--gs" href="{{ p.scholar }}" target="_blank" rel="noopener" title="Google Scholar">Scholar</a></li>{% endif %}
+      </ul>
       {%- endif %}
       {%- endunless %}
     </div>

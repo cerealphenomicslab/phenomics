@@ -1,6 +1,8 @@
 # Członkowie zespołu. Kolejność = kolejność na stronie.
 # photo: plik w assets/img/team/ (np. kuczynska.jpg), zostaw puste -> inicjały
 # role_pl / role_en: stanowisko (puste = nie wyświetlaj)
+# orcid: sam numer ORCID; researchgate / scholar: pełne linki do profili (puste = brak ikony)
+# Na podstawie ORCID-ów strona sama pobiera listę publikacji (tools/fetch_publications.py).
 - name: Anetta Kuczyńska
   degree: prof. dr hab.
   initials: AK
@@ -8,7 +10,9 @@
   role_pl: Kierownik zespołu
   role_en: Team leader
   email: ""
-  orcid: ""
+  orcid: "0000-0003-0203-3458"
+  researchgate: "https://www.researchgate.net/profile/Anetta-Kuczynska"
+  scholar: ""
   photo: ""
 - name: Krzysztof Mikołajczak
   degree: dr hab. inż., prof. IGR PAN
@@ -16,7 +20,9 @@
   role_pl: ""
   role_en: ""
   email: ""
-  orcid: ""
+  orcid: "0000-0003-3821-4461"
+  researchgate: "https://www.researchgate.net/profile/Krzysztof-Mikolajczak"
+  scholar: "https://scholar.google.com/citations?user=nIFUjpQAAAAJ"
   photo: ""
 - name: Piotr Ogrodowicz
   degree: dr hab.
@@ -24,7 +30,9 @@
   role_pl: ""
   role_en: ""
   email: ""
-  orcid: ""
+  orcid: "0000-0002-9044-8137"
+  researchgate: "https://www.researchgate.net/profile/Piotr-Ogrodowicz"
+  scholar: ""
   photo: ""
 - name: Michał Kempa
   degree: dr
@@ -32,7 +40,9 @@
   role_pl: ""
   role_en: ""
   email: ""
-  orcid: ""
+  orcid: "0000-0001-5368-5953"
+  researchgate: "https://www.researchgate.net/profile/Michal-Kempa"
+  scholar: ""
   photo: ""
 - name: Sebastian Szczepański
   degree: dr inż.
@@ -40,7 +50,9 @@
   role_pl: ""
   role_en: ""
   email: ""
-  orcid: ""
+  orcid: "0000-0001-9701-0771"
+  researchgate: ""
+  scholar: ""
   photo: ""
 - name: Martyna Michałek
   degree: mgr
@@ -48,7 +60,9 @@
   role_pl: Doktorantka
   role_en: PhD student
   email: ""
-  orcid: ""
+  orcid: "0000-0002-9416-9282"
+  researchgate: ""
+  scholar: ""
   photo: ""
 - name: Dominika Maryniak
   degree: mgr
@@ -56,7 +70,9 @@
   role_pl: Doktorantka
   role_en: PhD student
   email: ""
-  orcid: ""
+  orcid: "0009-0003-6177-5643"
+  researchgate: ""
+  scholar: ""
   photo: ""
 - name: Renata Holewińska
   degree: ""
@@ -65,4 +81,6 @@
   role_en: ""
   email: ""
   orcid: ""
+  researchgate: ""
+  scholar: ""
   photo: ""

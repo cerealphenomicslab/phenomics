@@ -11,8 +11,8 @@ Treść edytuje się w prostych plikach YAML, bez znajomości HTML.
 
 | Co | Plik |
 |---|---|
-| Członkowie zespołu, zdjęcia, e-maile, ORCID | `_data/team.yml` + zdjęcia w `assets/img/team/` |
-| Publikacje | `_data/publications.yml` |
+| Członkowie zespołu, zdjęcia, e-maile, ORCID, ResearchGate, Google Scholar | `_data/team.yml` + zdjęcia w `assets/img/team/` |
+| Publikacje | **automatycznie z ORCID** (patrz niżej); `_data/publications.yml` to lista zapasowa |
 | Projekty i granty | `_data/projects.yml` |
 | Aktualności | `_data/news.yml` (zdjęcia w `assets/img/news/`) |
 | Opis zespołu, obszary badań, metody, wyniki | `_data/content.yml` |
@@ -24,6 +24,15 @@ Każdy wpis ma wersję `_pl` i `_en`. Po zapisaniu zmian na GitHubie (choćby pr
 edycję pliku w przeglądarce) strona przebudowuje się sama w ok. 1–2 minuty.
 
 Listę brakujących treści zawiera plik [BRAKUJACE-INFORMACJE.md](BRAKUJACE-INFORMACJE.md).
+
+## Publikacje z ORCID
+
+Przy każdym wdrożeniu (i dodatkowo co poniedziałek rano) skrypt `tools/fetch_publications.py`
+pobiera prace wszystkich osób z polem `orcid` w `_data/team.yml`, usuwa duplikaty po DOI
+i uzupełnia autorów, tom i strony z Crossref. Członkowie zespołu są pogrubiani automatycznie.
+Aby publikacja pojawiła się na stronie, wystarczy dodać ją do swojego profilu ORCID.
+Jeśli ORCID jest niedostępny, strona pokazuje listę z `_data/publications.yml`.
+Odświeżenie na żądanie: zakładka **Actions → Deploy site to GitHub Pages → Run workflow**.
 
 ## Publikacja na GitHub Pages (jednorazowo)
 

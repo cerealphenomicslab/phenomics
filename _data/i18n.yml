@@ -41,7 +41,7 @@ pl:
   members: Członkowie zespołu
   photo_soon: zdjęcie wkrótce
   stats_projects: projektów badawczych
-  stats_pubs: wybranych publikacji
+  stats_pubs: publikacji
   stats_people: osób w zespole
   stats_funders: instytucji finansujących
 pl_months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, września, października, listopada, grudnia]
@@ -88,6 +88,6 @@ en:
   members: Team members
   photo_soon: photo coming soon
   stats_projects: research projects
-  stats_pubs: selected publications
+  stats_pubs: publications
   stats_people: team members
   stats_funders: funding bodies

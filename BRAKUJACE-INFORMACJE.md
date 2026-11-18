@@ -28,6 +28,6 @@ publikacji i grantów – do przejrzenia i poprawy. Pozostałe [nawiasy] to brak
 ## Kontakt i inne
 16. Pokój albo budynek (`_config.yml`). E-mail zespołu ustawiony: cerealphenomicslab@gmail.com.
 17. Opcjonalnie: link do zespołowego profilu w Scopus (`_config.yml` → `links`).
-18. Wymogi IGR: logotypy grantodawców. Deklaracja dostępności i polityka prywatności są już na stronie – po uruchomieniu domeny wpisać datę publikacji strony w `deklaracja-dostepnosci.md` i `en/accessibility.md`; warto, żeby IGR potwierdził treść.
+18. Logotypy grantodawców (opcjonalnie).
 19. **CV na stronach osobowych**: każdy uzupełnia swoje pliki `_osoby/<nazwisko>.pl.md` i `.en.md` (zwykły Markdown).
 20. Pełny tytuł projektu FLOWroots (EPPN2020 ID 206) – nie udało się go znaleźć w sieci.

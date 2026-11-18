@@ -2,12 +2,6 @@
 # image: plik w assets/img/news/ (opcjonalnie), link: adres "czytaj dalej" (opcjonalnie, np. DOI)
 # placeholder: true -> etykieta "przykład"; teksty w [nawiasach] do uzupełnienia
 # Osoby zawsze z tytułem naukowym i nazwiskiem (np. dr. inż. Sebastiana Szczepańskiego).
-- date: 2026-11-18
-  title_pl: Nowa publikacja w czasopiśmie Metabolomics
-  title_en: New paper in Metabolomics
-  text_pl: W czasopiśmie Metabolomics ukazała się praca dr. Michała Kempy i współpracowników poświęcona strategiom metabolicznym, którymi jęczmień odpowiada na stres, oraz ich skutkom dla fenotypu roślin.
-  text_en: A paper by Dr. Michał Kempa and co-workers on the metabolic strategies barley uses to respond to stress, and their consequences for plant phenotype, has been published in Metabolomics.
-  link: https://doi.org/10.1007/s11306-026-02406-8
 - date: 2026-11-08
   title_pl: Praca o melatoninie przyjęta do druku w Plant and Soil
   title_en: Melatonin paper accepted in Plant and Soil
@@ -19,6 +13,12 @@
   text_pl: W Scientific Reports ukazała się publikacja dr. Michała Kempy i współpracowników, przygotowana w ramach projektu NCN OPUS 21 (2021/41/B/NZ9/02576).
   text_en: A paper by Dr. Michał Kempa and co-workers, based on research from the NCN OPUS 21 project (2021/41/B/NZ9/02576), has been published in Scientific Reports.
   link: https://doi.org/10.1038/s41598-026-69888-3
+- date: 2026-02-02
+  title_pl: Nowa publikacja w czasopiśmie Metabolomics
+  title_en: New paper in Metabolomics
+  text_pl: W czasopiśmie Metabolomics ukazała się praca dr. Michała Kempy i współpracowników poświęcona strategiom metabolicznym, którymi jęczmień odpowiada na stres, oraz ich skutkom dla fenotypu roślin.
+  text_en: A paper by Dr. Michał Kempa and co-workers on the metabolic strategies barley uses to respond to stress, and their consequences for plant phenotype, has been published in Metabolomics.
+  link: https://doi.org/10.1007/s11306-026-02406-8
 - date: 2025-06-24
   title_pl: Startuje projekt OPUS 28 o długich niekodujących RNA
   title_en: OPUS 28 project on long non-coding RNAs starts

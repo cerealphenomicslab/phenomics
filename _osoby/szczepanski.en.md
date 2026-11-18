@@ -23,7 +23,7 @@ His research focuses on how plants respond to environmental stress at the genome
 - Molecular mechanisms of plant responses to abiotic stress, especially drought in barley
 - Regulatory networks and hormone signalling, including the role of phytohormones in root development
 - Evolutionary genetics of pines: introgression, hybridisation and habitat adaptation
-- Bioinformatics (R, Python)
+- Bioinformatics
 
 ## Education and career
 
@@ -34,4 +34,9 @@ His research focuses on how plants respond to environmental stress at the genome
 
 ## Research stays and training
 
-- Bioinformatics research stay at the Crop Research Institute, Prague (Czech Republic), 12 days
+- 2026 – course “MicroRNA Annotation and small RNA-Seq Analysis”, Physalia-courses
+- 2026 – course “Introduction to RNA sequencing data analysis with R/Bioconductor”, Physalia-courses
+- 2023 – course “Introduction to GWAS”, Physalia-courses
+- 2023 – course “Data visualization in R with ggplot2”, Physalia-courses
+- June 2023 – bioinformatics research stay at the Crop Research Institute, Prague (Czech Republic)
+- 2019 – course “Adaptation [full title to be added]”, Physalia-courses

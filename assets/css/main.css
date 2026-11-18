@@ -351,3 +351,8 @@ svg.ig .ig__dot { fill: currentColor; stroke: none; }
 .ig-strip__text { display: flex; flex-direction: column; gap: 2px; flex: 1; font-size: .92rem; }
 .ig-strip__cta { font-weight: 700; white-space: nowrap; }
 @media (max-width: 600px) { .ig-strip { flex-wrap: wrap; } .ig-strip__cta { width: 100%; padding-left: 60px; } }
+
+.topbar__right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.topbar__ig { display: inline-flex; color: inherit; opacity: .85; transition: opacity .15s; }
+.topbar__ig:hover { opacity: 1; }
+.topbar__ig svg.ig { width: 17px; height: 17px; }

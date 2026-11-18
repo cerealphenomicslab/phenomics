@@ -6,6 +6,10 @@
 <div class="topbar">
   <div class="wrap topbar__inner">
     <a class="topbar__inst" href="{{ site.contact.institute_url }}" target="_blank" rel="noopener">{{ t.institute_full }}</a>
+    <div class="topbar__right">
+    {%- if site.contact.instagram %}
+    <a class="topbar__ig" href="{{ site.contact.instagram }}" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram {{ site.contact.instagram_handle }}">{% include icon.html name='instagram' %}</a>
+    {%- endif %}
     <nav class="lang" aria-label="Language">
       {%- assign alt_url = '/' -%}{%- if page.lang == 'pl' %}{% assign alt_url = '/en/' %}{% endif -%}
       {%- if alt %}{% assign alt_url = alt.url %}{% endif -%}
@@ -17,6 +21,7 @@
       <span class="lang__item lang__cur" aria-current="true">ENG</span>
       {%- endif %}
     </nav>
+    </div>
   </div>
 </div>
 <header class="site-header">

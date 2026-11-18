@@ -201,6 +201,13 @@ address { font-style: normal; }
 .person__name { font-size: 1.12rem; margin: 0; }
 .team-grid--compact .person__name { font-size: 1rem; }
 .person__degree { display: block; font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 2px; }
+.person__icons { list-style: none; display: flex; gap: 6px; margin-top: 10px; }
+.ico { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; color: #fff; text-decoration: none; font: 700 .7rem/1 var(--font-body); letter-spacing: -.02em; transition: transform .15s, filter .15s; }
+.ico sup { font-size: .5rem; position: relative; top: -.32em; margin-left: .5px; }
+.ico:hover { color: #fff; transform: translateY(-1px); filter: brightness(1.1); }
+.ico--orcid { background: #a6ce39; }
+.ico--rg { background: #00ccbb; }
+.ico--gs { background: #4285f4; }
 .person__email { margin: 8px 0 0; font-size: .88rem; word-break: break-all; }
 .person__profiles { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .prof { display: inline-block; font: 600 .74rem/1 var(--font-body); padding: 6px 9px; border-radius: 6px; text-decoration: none; border: 1px solid currentColor; }

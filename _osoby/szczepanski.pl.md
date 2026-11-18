@@ -25,7 +25,7 @@ Bada, jak rośliny reagują na stres środowiskowy na poziomie genomu i transkry
 - Molekularne mechanizmy odpowiedzi roślin na stres abiotyczny, zwłaszcza suszę u jęczmienia
 - Sieci regulatorowe i sygnalizacja hormonalna, w tym rola fitohormonów w rozwoju korzeni
 - Genetyka ewolucyjna sosen: introgresja, hybrydyzacja i adaptacja do siedliska
-- Bioinformatyka (R, Python)
+- Bioinformatyka
 
 ## Wykształcenie i przebieg kariery
 
@@ -36,4 +36,9 @@ Bada, jak rośliny reagują na stres środowiskowy na poziomie genomu i transkry
 
 ## Staże i szkolenia
 
-- Staż naukowy z bioinformatyki w Crop Research Institute w Pradze (Czechy), 12 dni
+- 2026 – kurs „MicroRNA Annotation and small RNA-Seq Analysis”, Physalia-courses
+- 2026 – kurs „Introduction to RNA sequencing data analysis with R/Bioconductor”, Physalia-courses
+- 2023 – kurs „Introduction to GWAS”, Physalia-courses
+- 2023 – kurs „Data visualization in R with ggplot2”, Physalia-courses
+- czerwiec 2023 – staż naukowy z bioinformatyki w Crop Research Institute w Pradze (Czechy)
+- 2019 – kurs „Adaptation [pełny tytuł do uzupełnienia]”, Physalia-courses

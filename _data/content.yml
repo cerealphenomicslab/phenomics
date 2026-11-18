@@ -1,59 +1,95 @@
 # Treści opisowe strony głównej i strony "Badania" w obu językach.
-# Teksty w [nawiasach] to placeholdery do uzupełnienia.
+# SZKIC przygotowany na podstawie opisu zespołu w serwisie IGR, publikacji i grantów – do poprawy.
 pl:
   hero_eyebrow: Zakład Fenomiki Zbóż · Instytut Genetyki Roślin PAN
-  hero_title: "[hasło główne strony]"
-  hero_lead: "[krótki opis zespołu – 1–2 zdania]"
+  hero_title: Od fenotypu do genu – jak zboża radzą sobie ze stresem
+  hero_lead: Badamy reakcje jęczmienia jarego na suszę, wysoką temperaturę i patogeny, łącząc fenotypowanie wysokoprzepustowe z analizami genomicznymi i multiomicznymi.
   about_title: O nas
   about:
-    - "[opis zespołu – akapit 1]"
-    - "[opis zespołu – akapit 2]"
+    - Cereal Phenomics Lab to Zakład Fenomiki Zbóż Instytutu Genetyki Roślin PAN w Poznaniu. Prowadzimy kompleksowe badania jęczmienia jarego (<em>Hordeum vulgare</em> L.) na poziomie fenomu, transkryptomu, proteomu i metabolomu.
+    - Interesuje nas, w jaki sposób stresy abiotyczne i biotyczne, działające pojedynczo i łącznie, zmieniają rozwój, architekturę i plonowanie roślin. Analizujemy m.in. regulację interakcji fitohormonów przez mikroRNA i długie niekodujące RNA, rolę struktur epidermalnych w zmianach fenologicznych oraz genetyczne podłoże odporności na fuzariozę kłosów.
   focus_title: Obszary badawcze
   focus:
-    - { icon: leaf,    title: "[obszar badawczy 1]", text: "[opis obszaru badawczego]" }
-    - { icon: root,    title: "[obszar badawczy 2]", text: "[opis obszaru badawczego]" }
-    - { icon: hormone, title: "[obszar badawczy 3]", text: "[opis obszaru badawczego]" }
-    - { icon: omics,   title: "[obszar badawczy 4]", text: "[opis obszaru badawczego]" }
-    - { icon: clock,   title: "[obszar badawczy 5]", text: "[opis obszaru badawczego]" }
-    - { icon: dna,     title: "[obszar badawczy 6]", text: "[opis obszaru badawczego]" }
+    - icon: leaf
+      title: Fenomika stresu
+      text: Cechy plonotwórcze i fizjologiczne jęczmienia w warunkach suszy, wysokiej temperatury i stresów łączonych.
+    - icon: root
+      title: Korzenie i architektura roślin
+      text: Polowe, cyfrowe fenotypowanie systemu korzeniowego w wysokiej rozdzielczości; rola locus sdw1/denso.
+    - icon: hormone
+      title: Interakcje fitohormonów
+      text: Gibereliny, brasinosteroidy, strigolaktony i melatonina oraz ich regulacja przez miRNA i lncRNA.
+    - icon: omics
+      title: Multiomika odpowiedzi na stres
+      text: Transkryptom, proteom, metabolom i lipidom liścia flagowego, węzła krzewienia i korzeni.
+    - icon: clock
+      title: Fenologia i kwitnienie
+      text: Wczesność, geny HvGAMYB oraz Ppd-H1/Ppd-H2 i ich związek z tolerancją na stres.
+    - icon: dna
+      title: Mapowanie genetyczne
+      text: GWAS i mapowanie QTL cech plonotwórczych, korzeniowych oraz odporności na fuzariozę kłosów.
   methods:
-    - "[metoda 1]"
-    - "[metoda 2]"
-    - "[metoda 3]"
-    - "[metoda 4]"
-    - "[metoda 5]"
+    - Wysokoprzepustowe genotypowanie SNP
+    - Fenotypowanie manualne oraz nieinwazyjne fenotypowanie automatyczne
+    - Cyfrowe fenotypowanie korzeni w warunkach polowych w wysokiej rozdzielczości
+    - Sekwencjonowanie nowej generacji (NGS)
+    - Chromatografia HPLC i wysokorozdzielcza spektrometria mas (HPLC/MS)
   findings:
-    - "[najważniejszy wynik 1]"
-    - "[najważniejszy wynik 2]"
-    - "[najważniejszy wynik 3]"
-  keywords: ["[słowo kluczowe]", "[słowo kluczowe]", "[słowo kluczowe]"]
+    - Opisaliśmy zmiany fenotypowe związane z plonowaniem jęczmienia jarego w odpowiedzi na stresy środowiskowe.
+    - Zidentyfikowaliśmy geny, białka i metabolity zaangażowane w odpowiedź liści i korzeni na suszę.
+    - Scharakteryzowaliśmy profile ekspresji genów i białek liścia flagowego w warunkach suszy i wysokiej temperatury.
+    - Określiliśmy profile lipidów i steroli liści jęczmienia pod wpływem stresów abiotycznych.
+    - Zbadaliśmy ekspresję genów w węźle krzewienia linii sdw1 poddanych działaniu wysokiej temperatury.
+    - Opisaliśmy profile giberelin, brasinosteroidów i strigolaktonów w węźle krzewienia w warunkach suszy.
+    - Wykazaliśmy wpływ brasinosteroidów na poziom innych hormonów w korzeniach oraz związek melatoniny z reakcją na suszę.
+    - Powiązaliśmy wczesność roślin z tolerancją na stres.
+    - Wskazaliśmy regiony genomu jęczmienia związane z odpornością na fuzariozę kłosów i z plonowaniem.
+  keywords: [jęczmień, stres abiotyczny, stres biotyczny, susza, wysoka temperatura, fenotypowanie, architektura korzeni, liść flagowy, fitohormony, brasinosteroidy, gibereliny, strigolaktony, fuzarioza kłosów, GWAS, QTL, sekwencjonowanie mRNA, proteomika, metabolomika, lipidomika]
   collab_cta: Napisz do nas
 
 en:
   hero_eyebrow: Cereal Phenomics Team · Institute of Plant Genetics PAS
-  hero_title: "[main headline]"
-  hero_lead: "[short team description – 1–2 sentences]"
+  hero_title: From phenotype to gene – how cereals cope with stress
+  hero_lead: We study how spring barley responds to drought, heat and pathogens, combining high-throughput phenotyping with genomic and multi-omics analyses.
   about_title: About us
   about:
-    - "[team description – paragraph 1]"
-    - "[team description – paragraph 2]"
+    - The Cereal Phenomics Lab (Cereal Phenomics Team) is a research unit of the Institute of Plant Genetics, Polish Academy of Sciences, in Poznań. We carry out comprehensive studies of spring barley (<em>Hordeum vulgare</em> L.) at the phenome, transcriptome, proteome and metabolome levels.
+    - We investigate how abiotic and biotic stresses, acting alone or in combination, change plant development, architecture and yield. Our work covers miRNA and long non-coding RNA regulation of phytohormone crosstalk, the role of epidermal structures in phenological change, and the genetic basis of resistance to Fusarium head blight.
   focus_title: Research areas
   focus:
-    - { icon: leaf,    title: "[research area 1]", text: "[research area description]" }
-    - { icon: root,    title: "[research area 2]", text: "[research area description]" }
-    - { icon: hormone, title: "[research area 3]", text: "[research area description]" }
-    - { icon: omics,   title: "[research area 4]", text: "[research area description]" }
-    - { icon: clock,   title: "[research area 5]", text: "[research area description]" }
-    - { icon: dna,     title: "[research area 6]", text: "[research area description]" }
+    - icon: leaf
+      title: Stress phenomics
+      text: Yield-related and physiological traits of barley under drought, heat and combined stresses.
+    - icon: root
+      title: Roots and plant architecture
+      text: High-resolution digital root phenotyping in the field; the role of the sdw1/denso locus.
+    - icon: hormone
+      title: Phytohormone crosstalk
+      text: Gibberellins, brassinosteroids, strigolactones and melatonin, and their regulation by miRNAs and lncRNAs.
+    - icon: omics
+      title: Multi-omics of stress response
+      text: Transcriptome, proteome, metabolome and lipidome of the flag leaf, crown and roots.
+    - icon: clock
+      title: Phenology and flowering
+      text: Earliness, HvGAMYB and Ppd-H1/Ppd-H2 genes, and their links to stress tolerance.
+    - icon: dna
+      title: Genetic mapping
+      text: GWAS and QTL mapping of yield, root and Fusarium head blight resistance traits.
   methods:
-    - "[method 1]"
-    - "[method 2]"
-    - "[method 3]"
-    - "[method 4]"
-    - "[method 5]"
+    - High-throughput SNP genotyping
+    - Manual and non-destructive automated phenotyping
+    - High-resolution digital root phenotyping in the field
+    - Next-generation sequencing (NGS)
+    - HPLC and high-resolution mass spectrometry (HPLC/MS)
   findings:
-    - "[key finding 1]"
-    - "[key finding 2]"
-    - "[key finding 3]"
-  keywords: ["[keyword]", "[keyword]", "[keyword]"]
+    - We described yield-related phenotypic changes in spring barley in response to environmental stresses.
+    - We identified genes, proteins and metabolites involved in leaf and root responses to drought.
+    - We characterised gene and protein expression profiles of the flag leaf under drought and heat.
+    - We determined lipid and sterol profiles of barley leaves under abiotic stresses.
+    - We studied gene expression in the crown of sdw1 lines exposed to high temperature.
+    - We described gibberellin, brassinosteroid and strigolactone profiles in the crown under drought.
+    - We showed how brassinosteroids affect other hormones in roots and linked melatonin to the drought response.
+    - We linked plant earliness with stress tolerance.
+    - We identified barley genome regions associated with Fusarium head blight resistance and yield.
+  keywords: [barley, abiotic stress, biotic stress, drought, heat, phenotyping, root architecture, flag leaf, phytohormones, brassinosteroids, gibberellins, strigolactones, Fusarium head blight, GWAS, QTL, mRNA sequencing, proteomics, metabolomics, lipidomics]
   collab_cta: Write to us

@@ -9,7 +9,8 @@
       {%- if p.photo != "" and p.photo %}
       <img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy">
       {%- else %}
-      <span class="person__initials" aria-hidden="true">{{ p.initials }}</span>
+      {%- if p.sex == 'f' %}{% assign ph = 'placeholder-female.svg' %}{% else %}{% assign ph = 'placeholder-male.svg' %}{% endif %}
+      <img class="person__ph" src="{{ '/assets/img/team/' | append: ph | relative_url }}" alt="" loading="lazy">
       {%- endif %}
     </div>
     <div class="person__body">

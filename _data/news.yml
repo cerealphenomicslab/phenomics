@@ -1,21 +1,19 @@
 # Aktualności (najnowsze na górze).
-# image: plik w assets/img/news/ (opcjonalnie), link: adres "czytaj dalej" (opcjonalnie)
-# Teksty w [nawiasach] to placeholdery do uzupełnienia.
-- date: 2026-11-17
-  placeholder: true
-  title_pl: "[tytuł aktualności]"
-  title_en: "[news title]"
-  text_pl: "[treść aktualności]"
-  text_en: "[news text]"
-- date: 2026-11-17
-  placeholder: true
-  title_pl: "[tytuł aktualności]"
-  title_en: "[news title]"
-  text_pl: "[treść aktualności]"
-  text_en: "[news text]"
-- date: 2026-11-17
-  placeholder: true
-  title_pl: "[tytuł aktualności]"
-  title_en: "[news title]"
-  text_pl: "[treść aktualności]"
-  text_en: "[news text]"
+# image: plik w assets/img/news/ (opcjonalnie), link: adres "czytaj dalej" (opcjonalnie, np. DOI)
+# placeholder: true -> etykieta "przykład"; teksty w [nawiasach] do uzupełnienia
+- date: 2026-11-08
+  title_pl: Praca o melatoninie przyjęta do druku w Plant and Soil
+  title_en: Melatonin paper accepted in Plant and Soil
+  text_pl: Nasza praca o wpływie melatoniny na architekturę systemu korzeniowego jęczmienia została przyjęta do druku w czasopiśmie Plant and Soil. To efekt badań prowadzonych w projekcie NCN OPUS 18 (2019/35/B/NZ9/00208).
+  text_en: Our paper on the effect of melatonin on barley root system architecture has been accepted for publication in Plant and Soil. It presents results of the NCN OPUS 18 project (2019/35/B/NZ9/00208).
+- date: 2026-09-01
+  title_pl: Nowa publikacja w Scientific Reports
+  title_en: New paper in Scientific Reports
+  text_pl: W Scientific Reports ukazała się publikacja Krzysztofa Mikołajczaka i współpracowników, przygotowana w ramach projektu [nr grantu].
+  text_en: A paper by Krzysztof Mikołajczak and co-workers, based on research from project [grant number], has been published in Scientific Reports.
+- date: 2025-06-24
+  title_pl: Startuje projekt OPUS 28 o długich niekodujących RNA
+  title_en: OPUS 28 project on long non-coding RNAs starts
+  text_pl: Rozpoczęliśmy realizację projektu NCN OPUS 28 kierowanego przez prof. Anettę Kuczyńską. Przez cztery lata będziemy badać, jak długie niekodujące RNA regulują współdziałanie fitohormonów i szlaki sygnalizacji stresu u jęczmienia.
+  text_en: We have started the NCN OPUS 28 project led by Prof. Anetta Kuczyńska. Over four years we will study how long non-coding RNAs regulate phytohormone crosstalk and stress signalling pathways in barley.
+  link: https://projekty.ncn.gov.pl/?projekt_id=629631

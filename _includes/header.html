@@ -7,9 +7,14 @@
   <div class="wrap topbar__inner">
     <a class="topbar__inst" href="{{ site.contact.institute_url }}" target="_blank" rel="noopener">{{ t.institute_full }}</a>
     <nav class="lang" aria-label="Language">
-      <span class="lang__cur" aria-current="true">{% if page.lang == 'pl' %}PL{% else %}EN{% endif %}</span>
-      {%- if alt %}
-      <a class="lang__alt" href="{{ alt.url | relative_url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ t.switch_label }}</a>
+      {%- assign alt_url = '/' -%}{%- if page.lang == 'pl' %}{% assign alt_url = '/en/' %}{% endif -%}
+      {%- if alt %}{% assign alt_url = alt.url %}{% endif -%}
+      {%- if page.lang == 'pl' %}
+      <span class="lang__item lang__cur" aria-current="true">PL</span>
+      <a class="lang__item" href="{{ alt_url | relative_url }}" hreflang="en" lang="en">ENG</a>
+      {%- else %}
+      <a class="lang__item" href="{{ alt_url | relative_url }}" hreflang="pl" lang="pl">PL</a>
+      <span class="lang__item lang__cur" aria-current="true">ENG</span>
       {%- endif %}
     </nav>
   </div>
@@ -22,6 +27,9 @@
         <span class="brand__name">Cereal Phenomics Lab</span>
         <span class="brand__sub">{{ t.team_name }}</span>
       </span>
+    </a>
+    <a class="brand__igr" href="{{ site.contact.institute_url }}" target="_blank" rel="noopener" title="{{ t.institute_full }}">
+      <img src="{{ '/assets/img/igr-pan.png' | relative_url }}" alt="{{ t.institute }}" width="44" height="44">
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__label">{{ t.menu }}</span>

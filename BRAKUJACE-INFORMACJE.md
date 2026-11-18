@@ -1,9 +1,8 @@
 # Czego brakuje na stronie (do uzupełnienia)
 
-Teksty, które nie pochodzą ze strony IGR, są na stronie zastąpione placeholderami
-w nawiasach kwadratowych, np. `[opis zespołu – akapit 1]`. Wystarczy je podmienić
-we wskazanych plikach. Na stronie zostały tylko dane źródłowe: nazwiska, stopnie,
-numery i kierownicy grantów, daty, tytuły publikacji i projektów oraz dane kontaktowe IGR.
+Opisy na stronie (strona główna, Badania, opisy podstron, zaproszenie do współpracy,
+aktualności) to SZKICE przygotowane przez Claude na podstawie opisu zespołu w serwisie IGR,
+publikacji i grantów – do przejrzenia i poprawy. Pozostałe [nawiasy] to brakujące dane.
 
 ## Teksty (placeholdery)
 1. **Strona główna i „Badania”** (`_data/content.yml`, PL i EN): hasło główne, opis zespołu (2 akapity), 6 obszarów badawczych, metody, najważniejsze wyniki, słowa kluczowe.

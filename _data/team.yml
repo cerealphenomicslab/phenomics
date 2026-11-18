@@ -1,9 +1,10 @@
 # Członkowie zespołu. Kolejność = kolejność na stronie.
-# photo: plik w assets/img/team/ (np. kuczynska.jpg), zostaw puste -> inicjały
+# photo: plik w assets/img/team/ (np. kuczynska.jpg); puste -> sylwetka zastępcza wg pola sex (f/m)
 # role_pl / role_en: stanowisko (puste = nie wyświetlaj)
 # orcid: sam numer ORCID; researchgate / scholar: pełne linki do profili (puste = brak ikony)
 # Na podstawie ORCID-ów strona sama pobiera listę publikacji (tools/fetch_publications.py).
 - name: Anetta Kuczyńska
+  sex: f
   degree: prof. dr hab.
   initials: AK
   leader: true
@@ -15,6 +16,7 @@
   scholar: ""
   photo: ""
 - name: Krzysztof Mikołajczak
+  sex: m
   degree: dr hab. inż., prof. IGR PAN
   initials: KM
   role_pl: ""
@@ -25,6 +27,7 @@
   scholar: "https://scholar.google.com/citations?user=nIFUjpQAAAAJ"
   photo: ""
 - name: Piotr Ogrodowicz
+  sex: m
   degree: dr hab.
   initials: PO
   role_pl: ""
@@ -35,6 +38,7 @@
   scholar: ""
   photo: ""
 - name: Michał Kempa
+  sex: m
   degree: dr
   initials: MK
   role_pl: ""
@@ -45,6 +49,7 @@
   scholar: ""
   photo: ""
 - name: Sebastian Szczepański
+  sex: m
   degree: dr inż.
   initials: SS
   role_pl: ""
@@ -55,6 +60,7 @@
   scholar: "https://scholar.google.com/citations?user=Rz7BfQ8AAAAJ"
   photo: ""
 - name: Martyna Michałek
+  sex: f
   degree: mgr
   initials: MM
   role_pl: Doktorantka
@@ -65,6 +71,7 @@
   scholar: ""
   photo: ""
 - name: Dominika Maryniak
+  sex: f
   degree: mgr
   initials: DM
   role_pl: Doktorantka
@@ -75,6 +82,7 @@
   scholar: ""
   photo: ""
 - name: Renata Holewińska
+  sex: f
   degree: ""
   initials: RH
   role_pl: ""

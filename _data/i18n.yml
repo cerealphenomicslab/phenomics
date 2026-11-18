@@ -1,7 +1,7 @@
 # Teksty interfejsu w obu językach
 pl:
   lang_name: Polski
-  switch_label: English
+  switch_label: ENG
   team_name: Zakład Fenomiki Zbóż
   department: Zakład Fenomiki Zbóż
   institute: Instytut Genetyki Roślin PAN
@@ -35,9 +35,9 @@ pl:
   phone: Telefon
   email: E-mail
   find_us: Jak do nas trafić
-  collab_title: "[nagłówek zaproszenia do współpracy]"
-  collab_text: "[tekst zaproszenia do współpracy]"
-  footer_note: "[tekst w stopce]"
+  collab_title: Współpraca, doktorat, staż?
+  collab_text: Chętnie nawiążemy współpracę naukową i przyjmiemy studentów oraz doktorantów zainteresowanych fenotypowaniem i genetyką zbóż.
+  footer_note: Strona Zakładu Fenomiki Zbóż Instytutu Genetyki Roślin PAN w Poznaniu.
   rights: Wszelkie prawa zastrzeżone.
   methods: Metody i narzędzia
   findings: Najważniejsze wyniki
@@ -86,9 +86,9 @@ en:
   phone: Phone
   email: E-mail
   find_us: How to find us
-  collab_title: "[collaboration call-to-action heading]"
-  collab_text: "[collaboration call-to-action text]"
-  footer_note: "[footer text]"
+  collab_title: Collaboration, PhD, internship?
+  collab_text: We welcome research collaborations as well as students and PhD candidates interested in cereal phenotyping and genetics.
+  footer_note: Cereal Phenomics Team website, Institute of Plant Genetics PAS, Poznań.
   rights: All rights reserved.
   methods: Methods and tools
   findings: Key findings

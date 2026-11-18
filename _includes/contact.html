@@ -13,6 +13,7 @@
       <dl class="contact__dl">
         <div><dt>{{ t.phone }}</dt><dd><a href="tel:{{ c.phone | remove: ' ' }}">{{ c.phone }}</a></dd></div>
         <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ c.email }}">{{ c.email }}</a></dd></div>
+        {%- if c.instagram %}<div><dt>Instagram</dt><dd><a class="social social--inline" href="{{ c.instagram }}" target="_blank" rel="noopener">{% include icon.html name='instagram' %}<span>{{ c.instagram_handle }}</span></a></dd></div>{% endif %}
         <div><dt>{{ t.leader }}</dt><dd>{{ leader.degree }} {{ leader.name }}{% if leader.email != "" %}<br><a href="mailto:{{ leader.email }}">{{ leader.email }}</a>{% endif %}</dd></div>
       </dl>
     </div>

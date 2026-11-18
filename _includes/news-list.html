@@ -16,3 +16,10 @@
   </li>
   {%- endfor %}
 </ul>
+{%- if site.contact.instagram %}
+<a class="ig-strip" href="{{ site.contact.instagram }}" target="_blank" rel="noopener">
+  <span class="ig-strip__icon">{% include icon.html name='instagram' %}</span>
+  <span class="ig-strip__text"><strong>{{ site.contact.instagram_handle }}</strong><span>{{ t.ig_text }}</span></span>
+  <span class="ig-strip__cta">{{ t.ig_cta }} →</span>
+</a>
+{%- endif %}

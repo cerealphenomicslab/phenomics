@@ -20,6 +20,9 @@
         <a href="tel:{{ c.phone | remove: ' ' }}">{{ c.phone }}</a><br>
         <a href="mailto:{{ c.email }}">{{ c.email }}</a>
       </address>
+      {%- if c.instagram %}
+      <a class="social" href="{{ c.instagram }}" target="_blank" rel="noopener">{% include icon.html name='instagram' %}<span>{{ c.instagram_handle }}</span></a>
+      {%- endif %}
     </div>
     <div>
       <h2 class="footer-h">{{ t.shortcuts }}</h2>

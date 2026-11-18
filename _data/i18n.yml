@@ -50,6 +50,18 @@ pl:
   stats_pubs: publikacji
   stats_people: osób w zespole
   stats_funders: instytucji finansujących
+  new_tab: otwiera się w nowej karcie
+  profile: Profil i CV
+  back_team: Wszyscy członkowie zespołu
+  led_projects: Kierowane projekty
+  person_pubs: Publikacje w zespole
+  person_pubs_note: Lista pobierana automatycznie z ORCID.
+  profiles: Profile naukowe
+  privacy: Polityka prywatności
+  accessibility: Deklaracja dostępności
+  map_consent: Mapa Google ładuje się dopiero po kliknięciu. Google może wtedy zapisać dane o Twojej wizycie.
+  map_show: Pokaż mapę
+  map_open: Otwórz w Mapach Google
 pl_months: [stycznia, lutego, marca, kwietnia, maja, czerwca, lipca, sierpnia, września, października, listopada, grudnia]
 
 en:
@@ -103,3 +115,15 @@ en:
   stats_pubs: publications
   stats_people: team members
   stats_funders: funding bodies
+  new_tab: opens in a new tab
+  profile: Profile and CV
+  back_team: All team members
+  led_projects: Projects led
+  person_pubs: Publications with the team
+  person_pubs_note: Retrieved automatically from ORCID.
+  profiles: Research profiles
+  privacy: Privacy policy
+  accessibility: Accessibility statement
+  map_consent: The Google map loads only after you click. Google may then record data about your visit.
+  map_show: Show map
+  map_open: Open in Google Maps

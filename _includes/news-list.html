@@ -11,7 +11,7 @@
       <p class="news-card__date"><time datetime="{{ n.date | date: '%Y-%m-%d' }}">{% include date.html d=n.date %}</time>{% if n.placeholder %} <span class="badge badge--ph">{{ t.example }}</span>{% endif %}</p>
       <h3 class="news-card__title">{% if page.lang == 'pl' %}{{ n.title_pl }}{% else %}{{ n.title_en }}{% endif %}</h3>
       <p>{% if page.lang == 'pl' %}{{ n.text_pl }}{% else %}{{ n.text_en }}{% endif %}</p>
-      {%- if n.link %}<a class="more" href="{{ n.link }}">{{ t.read_more }} →</a>{% endif %}
+      {%- if n.link %}<a class="more" href="{{ n.link }}"{% if n.link contains "://" %} target="_blank" rel="noopener"{% endif %}>{{ t.read_more }} →</a>{% endif %}
     </div>
   </li>
   {%- endfor %}

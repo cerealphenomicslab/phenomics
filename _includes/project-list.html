@@ -13,7 +13,7 @@
       </div>
       <h3 class="project__title">{% if page.lang == 'pl' %}{{ p.title_pl }}{% else %}{{ p.title_en }}{% endif %}</h3>
       <dl class="project__meta">
-        <div><dt>{{ t.project_leader }}</dt><dd>{{ p.leader }}</dd></div>
+        <div><dt>{{ t.project_leader }}</dt>{%- assign lp = site.data.team | where: "name", p.leader | first -%}<dd>{% if lp and lp.degree != "" %}{{ lp.degree }} {% endif %}{{ p.leader }}</dd></div>
         {%- if p.period %}<div><dt>{{ t.period }}</dt><dd>{{ p.period }}</dd></div>{% endif %}
       </dl>
     </li>

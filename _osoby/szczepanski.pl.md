@@ -41,4 +41,4 @@ Bada, jak rośliny reagują na stres środowiskowy na poziomie genomu i transkry
 - 2023 – kurs „Introduction to GWAS”, Physalia-courses
 - 2023 – kurs „Data visualization in R with ggplot2”, Physalia-courses
 - czerwiec 2023 – staż naukowy z bioinformatyki w Crop Research Institute w Pradze (Czechy)
-- 2019 – kurs „Adaptation [pełny tytuł do uzupełnienia]”, Physalia-courses
+- 2019 – kurs „Adaptation Genomics”, Physalia-courses

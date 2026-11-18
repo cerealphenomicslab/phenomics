@@ -39,4 +39,4 @@ His research focuses on how plants respond to environmental stress at the genome
 - 2023 – course “Introduction to GWAS”, Physalia-courses
 - 2023 – course “Data visualization in R with ggplot2”, Physalia-courses
 - June 2023 – bioinformatics research stay at the Crop Research Institute, Prague (Czech Republic)
-- 2019 – course “Adaptation [full title to be added]”, Physalia-courses
+- 2019 – course “Adaptation Genomics”, Physalia-courses

@@ -10,7 +10,7 @@
   --green-600: #0b845b;
   --green-100: #e3f1ea;
   --green-50:  #f1f7f3;
-  --gold-600:  #b8891c;
+  --gold-600:  #8a6410;   /* przyciemnione dla kontrastu WCAG AA (min. 4,5:1) */
   --gold-500:  #d4a72c;
   --gold-300:  #ecd28a;
   --gold-50:   #fbf6e7;
@@ -95,7 +95,7 @@ address { font-style: normal; }
 .site-nav a { display: block; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500; font-size: .95rem; }
 .site-nav a:hover { background: var(--green-50); color: var(--green-700); }
 .site-nav a[aria-current="page"] { color: var(--green-700); box-shadow: inset 0 -2px 0 var(--gold-500); border-radius: 0; }
-.nav-toggle { display: none; align-items: center; gap: 8px; background: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font: 600 .9rem var(--font-body); color: var(--green-900); cursor: pointer; }
+.nav-toggle { min-height: 40px;  display: none; align-items: center; gap: 8px; background: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font: 600 .9rem var(--font-body); color: var(--green-900); cursor: pointer; }
 .nav-toggle__bars, .nav-toggle__bars::before, .nav-toggle__bars::after { display: block; width: 18px; height: 2px; background: currentColor; position: relative; content: ""; }
 .nav-toggle__bars::before { position: absolute; top: -6px; }
 .nav-toggle__bars::after { position: absolute; top: 6px; }
@@ -356,3 +356,35 @@ svg.ig .ig__dot { fill: currentColor; stroke: none; }
 .topbar__ig { display: inline-flex; color: inherit; opacity: .85; transition: opacity .15s; }
 .topbar__ig:hover { opacity: 1; }
 .topbar__ig svg.ig { width: 17px; height: 17px; }
+
+/* --- Dostępność: większe pola dotyku w górnym pasku (min. 24 px) --- */
+.lang__item, .topbar__ig { min-height: 32px; min-width: 32px; display: inline-flex; align-items: center; justify-content: center; }
+.topbar__inst { padding: 6px 0; }
+:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* --- Klikalne karty zespołu --- */
+a.person__photo { display: grid; overflow: hidden; }
+a.person__photo img { transition: transform .25s ease; }
+.person:hover a.person__photo img { transform: scale(1.03); }
+.person__name a { color: inherit; text-decoration: none; }
+.person__name a:hover { color: var(--green-600); text-decoration: underline; }
+
+/* --- Strona osobowa --- */
+.person-hero__grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
+.person-hero__photo { aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: linear-gradient(160deg, var(--green-100), var(--gold-50)); }
+.person-hero__photo img { width: 100%; height: 100%; object-fit: cover; }
+.person-hero__degree { display: block; font-family: var(--font-body); font-size: 1rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 4px; letter-spacing: 0; }
+.person-hero .eyebrow a { color: inherit; text-decoration: none; }
+.person-hero .eyebrow a:hover { text-decoration: underline; }
+.person-cv h2 { font-size: 1.4rem; margin-top: 1.6em; }
+.person-cv h2:first-child { margin-top: 0; }
+.person-projects { list-style: none; padding: 0; display: grid; gap: 14px; }
+.person-projects li { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; }
+.muted { color: var(--ink-soft); font-size: .92rem; }
+@media (max-width: 640px) { .person-hero__grid { grid-template-columns: 1fr; gap: 20px; } .person-hero__photo { max-width: 200px; } }
+
+/* --- Mapa ładowana po kliknięciu --- */
+.map-consent { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--green-50); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 24px; }
+.map-consent p { margin: 0; max-width: 32em; font-size: .92rem; color: var(--ink-soft); }
+.map-consent .btn { cursor: pointer; border: 0; font: inherit; }

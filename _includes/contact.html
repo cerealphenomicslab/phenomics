@@ -19,8 +19,12 @@
     </div>
     <div class="contact__map">
       <h2>{{ t.find_us }}</h2>
-      <iframe title="{{ t.find_us }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q={{ c.map_query | url_encode }}&amp;z=15&amp;output=embed"></iframe>
+      {%- capture map_src %}https://maps.google.com/maps?q={{ c.map_query | url_encode }}&z=15&output=embed{% endcapture %}
+      <div class="map-consent" data-map-src="{{ map_src | escape }}" data-map-title="{{ t.find_us }}">
+        <p>{{ t.map_consent }}</p>
+        <button type="button" class="btn btn--gold js-map-load">{{ t.map_show }}</button>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query={{ c.map_query | url_encode }}" target="_blank" rel="noopener">{{ t.map_open }} ↗</a>
+      </div>
     </div>
   </div>
 </section>

@@ -21,11 +21,13 @@ publikacji i grantów – do przejrzenia i poprawy. Pozostałe [nawiasy] to brak
 12. Zdjęcia pola, laboratorium i fenotypowania na stronę główną i do „Badań”.
 
 ## Zespół (`_data/team.yml`)
-13. Stanowiska: K. Mikołajczak, P. Ogrodowicz, M. Kempa, S. Szczepański, R. Holewińska.
+13. Stanowiska: K. Mikołajczak, P. Ogrodowicz, M. Kempa, S. Szczepański (R. Holewińska: „Technik” – ewentualnie doprecyzować).
 14. Indywidualne e-maile. Brakujące profile (`_data/team.yml`): ResearchGate – D. Maryniak; Google Scholar – wszyscy poza K. Mikołajczakiem i S. Szczepańskim. Linki RG znalezione automatycznie (A. Kuczyńska, K. Mikołajczak, P. Ogrodowicz, M. Kempa) trzeba sprawdzić.
 15. Czy dodać A. Aniołę i R. Trzeciak (są na zdjęciu zespołu w serwisie IGR)?
 
 ## Kontakt i inne
-16. E-mail zespołu lub kierownika (teraz jest `office@igr.poznan.pl`), pokój albo budynek (`_config.yml`).
+16. Pokój albo budynek (`_config.yml`). E-mail zespołu ustawiony: cerealphenomicslab@gmail.com.
 17. Opcjonalnie: link do zespołowego profilu w Scopus (`_config.yml` → `links`).
-18. Wymogi IGR: deklaracja dostępności, polityka prywatności, logotypy instytutu i grantodawców.
+18. Wymogi IGR: logotypy grantodawców. Deklaracja dostępności i polityka prywatności są już na stronie – po uruchomieniu domeny wpisać datę publikacji strony w `deklaracja-dostepnosci.md` i `en/accessibility.md`; warto, żeby IGR potwierdził treść.
+19. **CV na stronach osobowych**: każdy uzupełnia swoje pliki `_osoby/<nazwisko>.pl.md` i `.en.md` (zwykły Markdown).
+20. Pełny tytuł projektu FLOWroots (EPPN2020 ID 206) – nie udało się go znaleźć w sieci.

@@ -4,6 +4,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:          # w PR tylko budowanie (sprawdzenie), bez publikacji
   schedule:
     - cron: "17 4 * * 1"   # co poniedziałek rano: odświeżenie publikacji z ORCID
   workflow_dispatch:
@@ -14,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
   cancel-in-progress: true
 
 jobs:
@@ -31,14 +32,17 @@ jobs:
         continue-on-error: true
       - id: pages
         uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - name: Build
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

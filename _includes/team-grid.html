@@ -4,17 +4,18 @@
 <ul class="team-grid{% if include.compact %} team-grid--compact{% endif %}">
   {%- for p in people %}
   {%- assign role = p.role_pl -%}{%- if page.lang == 'en' %}{% assign role = p.role_en %}{% endif %}
+  {%- if page.lang == 'en' %}{% assign purl = '/en/team/' | append: p.slug | append: '/' %}{% else %}{% assign purl = '/zespol/' | append: p.slug | append: '/' %}{% endif %}
   <li class="person{% if p.leader and include.compact == nil %} person--leader{% endif %}">
-    <div class="person__photo">
+    <a class="person__photo" href="{{ purl | relative_url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
       {%- if p.photo != "" and p.photo %}
       <img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy">
       {%- else %}
       {%- if p.sex == 'f' %}{% assign ph = 'placeholder-female.svg' %}{% else %}{% assign ph = 'placeholder-male.svg' %}{% endif %}
       <img class="person__ph" src="{{ '/assets/img/team/' | append: ph | relative_url }}" alt="" loading="lazy">
       {%- endif %}
-    </div>
+    </a>
     <div class="person__body">
-      <h3 class="person__name">{% if p.degree != "" %}<span class="person__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}</h3>
+      <h3 class="person__name"><a href="{{ purl | relative_url }}" target="_blank" rel="noopener">{% if p.degree != "" %}<span class="person__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}<span class="visually-hidden"> ({{ t.new_tab }})</span></a></h3>
       {%- if include.compact and (p.orcid != "" or p.researchgate != "" or p.scholar != "") %}
       <ul class="person__icons">
         {%- if p.orcid and p.orcid != "" %}<li><a class="ico ico--orcid" href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID – {{ p.name }}">iD</a></li>{% endif %}

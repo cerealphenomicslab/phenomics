@@ -2,8 +2,12 @@
 # photo: plik w assets/img/team/ (np. kuczynska.jpg); puste -> sylwetka zastępcza wg pola sex (f/m)
 # role_pl / role_en: stanowisko (puste = nie wyświetlaj)
 # orcid: sam numer ORCID; researchgate / scholar: pełne linki do profili (puste = brak ikony)
+# slug: adres strony osobowej (/zespol/<slug>/ i /en/team/<slug>/), treść CV w _osoby/<slug>.pl.md i .en.md
+# joined: rok-miesiąc dołączenia; prace sprzed tej daty widoczne tylko w ORCID tej osoby są pomijane
+# other_names: inne nazwiska w publikacjach (np. panieńskie)
 # Na podstawie ORCID-ów strona sama pobiera listę publikacji (tools/fetch_publications.py).
 - name: Anetta Kuczyńska
+  slug: kuczynska
   sex: f
   degree: prof. dr hab.
   initials: AK
@@ -16,6 +20,7 @@
   scholar: ""
   photo: ""
 - name: Krzysztof Mikołajczak
+  slug: mikolajczak
   sex: m
   degree: dr hab. inż., prof. IGR PAN
   initials: KM
@@ -27,6 +32,7 @@
   scholar: "https://scholar.google.com/citations?user=nIFUjpQAAAAJ"
   photo: ""
 - name: Piotr Ogrodowicz
+  slug: ogrodowicz
   sex: m
   degree: dr hab.
   initials: PO
@@ -38,6 +44,7 @@
   scholar: ""
   photo: ""
 - name: Michał Kempa
+  slug: kempa
   sex: m
   degree: dr
   initials: MK
@@ -49,6 +56,8 @@
   scholar: ""
   photo: ""
 - name: Sebastian Szczepański
+  slug: szczepanski
+  joined: 2025-12   # wcześniejsze prace z samego ORCID tej osoby nie są pokazywane
   sex: m
   degree: dr inż.
   initials: SS
@@ -60,6 +69,8 @@
   scholar: "https://scholar.google.com/citations?user=Rz7BfQ8AAAAJ"
   photo: ""
 - name: Martyna Michałek
+  slug: michalek
+  other_names: [Martyna Bodzak]   # nazwisko panieńskie (w starszych publikacjach)
   sex: f
   degree: mgr
   initials: MM
@@ -71,6 +82,7 @@
   scholar: ""
   photo: ""
 - name: Dominika Maryniak
+  slug: maryniak
   sex: f
   degree: mgr
   initials: DM
@@ -82,11 +94,12 @@
   scholar: ""
   photo: ""
 - name: Renata Holewińska
+  slug: holewinska
   sex: f
   degree: ""
   initials: RH
-  role_pl: ""
-  role_en: ""
+  role_pl: Technik
+  role_en: Technician
   email: ""
   orcid: ""
   researchgate: ""

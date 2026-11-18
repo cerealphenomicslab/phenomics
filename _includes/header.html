@@ -1,6 +1,6 @@
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- assign nav = site.data.nav[page.lang] -%}
-{%- assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
+{%- assign alt = site.pages | concat: site.osoby | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
 {%- assign home = nav | first -%}
 <a class="skip" href="#main">{{ t.skip }}</a>
 <div class="topbar">
@@ -42,7 +42,7 @@
     <nav class="site-nav" id="site-nav" aria-label="{{ t.menu }}">
       <ul>
         {%- for item in nav %}
-        <li><a href="{{ item.url | relative_url }}"{% if item.ref == page.ref %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        <li><a href="{{ item.url | relative_url }}"{% if item.ref == page.ref or item.ref == page.nav_ref %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {%- endfor %}
       </ul>
     </nav>

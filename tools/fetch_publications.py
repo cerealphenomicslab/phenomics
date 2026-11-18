@@ -41,14 +41,41 @@ def ascii_fold(text):
     return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
 
 
+def team_blocks():
+    """Wpisy z _data/team.yml jako słowniki (prosty parser, bez PyYAML)."""
+    text = open(TEAM, encoding="utf-8").read()
+    out = []
+    for block in re.split(r"^- ", text, flags=re.M)[1:]:
+        d = {}
+        for line in ("  " + block).splitlines():
+            m = re.match(r"^\s{2}(\w+):\s*(.*?)\s*(#.*)?$", line)
+            if m:
+                d[m.group(1)] = m.group(2).strip('"')
+        out.append(d)
+    return out
+
+
 def team_members():
-    """(nazwisko, pierwsza litera imienia) członków zespołu, bez polskich znaków."""
-    names = re.findall(r"^- name:\s*(.+)$", open(TEAM, encoding="utf-8").read(), flags=re.M)
+    """(nazwisko, pierwsza litera imienia) członków zespołu, bez polskich znaków.
+    Uwzględnia też inne nazwiska z pola other_names (np. panieńskie)."""
     out = set()
-    for n in names:
-        parts = n.strip().strip('"').split()
-        if len(parts) >= 2:
-            out.add((ascii_fold(parts[-1]), ascii_fold(parts[0])[:1]))
+    for d in team_blocks():
+        names = [d.get("name", "")]
+        names += [n.strip() for n in d.get("other_names", "").strip("[]").split(",") if n.strip()]
+        for n in names:
+            parts = n.split()
+            if len(parts) >= 2:
+                out.add((ascii_fold(parts[-1]), ascii_fold(parts[0])[:1]))
+    return out
+
+
+def joined_dates():
+    """ORCID -> (rok, miesiąc) dołączenia do zespołu (pole joined: RRRR-MM)."""
+    out = {}
+    for d in team_blocks():
+        m = re.match(r"(\d{4})(?:-(\d{1,2}))?", d.get("joined", ""))
+        if d.get("orcid") and m:
+            out[d["orcid"]] = (int(m.group(1)), int(m.group(2) or 1))
     return out
 
 
@@ -112,10 +139,12 @@ def works_for(orcid):
                 doi = norm_doi(eid.get("external-id-value"))
                 break
         year = val(w, "publication-date", "year", "value")
+        month = val(w, "publication-date", "month", "value")
         out.append({
             "title": clean(val(w, "title", "title", "value")),
             "journal": clean(val(w, "journal-title", "value")),
             "year": int(year) if year and year.isdigit() else None,
+            "month": int(month) if month and month.isdigit() else 0,
             "doi": doi,
             "url": val(w, "url", "value"),
             "orcid": orcid,
@@ -208,6 +237,7 @@ def crossref(doi):
         "authors": authors,
         "details": details,
         "year": dp[0][0] if dp and dp[0] else None,
+        "month": dp[0][1] if dp and dp[0] and len(dp[0]) > 1 else 0,
     }
 
 
@@ -265,6 +295,7 @@ def main():
         meta = dict(zip(dois, ex.map(crossref, dois)))
 
     members = team_members()
+    joined = joined_dates()
     pubs = []
     for w in merged.values():
         cr = meta.get(w["doi"]) if w["doi"] else None
@@ -286,13 +317,18 @@ def main():
             continue
         if not item["title"] or not item["year"] or item["year"] < MIN_YEAR:
             continue
+        # praca widoczna tylko w ORCID osób, które dołączyły do zespołu później -> pomijamy
+        month = (cr or {}).get("month") or w.get("month") or 0
+        if all(o in joined and (item["year"], month) < joined[o] for o in w["orcids"]):
+            print(f"  [przed dołączeniem do zespołu] {item['year']} | {item['title'][:80]}")
+            continue
         pubs.append(item)
 
     pubs.sort(key=lambda p: (-p["year"], p["title"].lower()))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(pubs, f, ensure_ascii=False, indent=1)
     for p in pubs:
-        print(f"  {p['group']:5} {p['authors_html'].count('<strong>')}/{len(p['team_orcids'])} | {p['year']} | {p['journal'][:40]:40} | {'DOI' if p['doi'] else '---'} | {p['title'][:90]}")
+        print(f"  {p['group']:5} {p['authors_html'].count('<strong>')}/{len(p['team_orcids'])} | {p['year']} | {p['journal'][:40]:40} | {p['doi'] or '---'} | {p['title'][:90]} | {re.sub('<[^>]+>', '', p['authors_html'])[:60]}")
     print(f"Zapisano {len(pubs)} publikacji do {os.path.relpath(OUT, ROOT)}"
           + (f" (nieudane ORCID: {', '.join(failed)})" if failed else ""))
     return 0

@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign p = site.data.team | where: "slug", page.slug | first -%}
+{%- assign nav = site.data.nav[page.lang] -%}
+{%- assign url_team = nav | where: "ref", "team" | first -%}
+{%- assign role = p.role_pl -%}{%- if page.lang == 'en' %}{% assign role = p.role_en %}{% endif -%}
+<section class="page-hero person-hero">
+  <div class="wrap person-hero__grid">
+    <div class="person-hero__photo">
+      {%- if p.photo and p.photo != "" %}
+      <img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="{{ p.name }}">
+      {%- else %}
+      {%- if p.sex == 'f' %}{% assign ph = 'placeholder-female.svg' %}{% else %}{% assign ph = 'placeholder-male.svg' %}{% endif %}
+      <img src="{{ '/assets/img/team/' | append: ph | relative_url }}" alt="">
+      {%- endif %}
+    </div>
+    <div>
+      <p class="eyebrow"><a href="{{ url_team.url | relative_url }}">← {{ t.back_team }}</a></p>
+      <h1>{% if p.degree != "" %}<span class="person-hero__degree">{{ p.degree }}</span> {% endif %}{{ p.name }}</h1>
+      {%- if role != "" %}<p class="person__role">{{ role }}</p>{% endif %}
+      {%- if p.email and p.email != "" %}<p class="person__email"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+      {%- if p.orcid != "" or p.researchgate != "" or p.scholar != "" %}
+      <ul class="person__profiles" aria-label="{{ t.profiles }}">
+        {%- if p.orcid and p.orcid != "" %}<li><a class="prof prof--orcid" href="https://orcid.org/{{ p.orcid }}" target="_blank" rel="noopener">ORCID</a></li>{% endif %}
+        {%- if p.researchgate and p.researchgate != "" %}<li><a class="prof prof--rg" href="{{ p.researchgate }}" target="_blank" rel="noopener">ResearchGate</a></li>{% endif %}
+        {%- if p.scholar and p.scholar != "" %}<li><a class="prof prof--gs" href="{{ p.scholar }}" target="_blank" rel="noopener">Scholar</a></li>{% endif %}
+      </ul>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+<div class="page-body">
+  <section class="section">
+    <div class="wrap"><div class="prose person-cv">
+{{ content }}
+    </div></div>
+  </section>
+  {%- assign led = "" | split: "" -%}
+  {%- for f in site.data.projects %}{% for pr in f.items %}{% if pr.leader == p.name %}{% assign led = led | push: pr %}{% endif %}{% endfor %}{% endfor -%}
+  {%- if led.size > 0 %}
+  <section class="section section--tint">
+    <div class="wrap">
+      <h2>{{ t.led_projects }}</h2>
+      <ul class="person-projects">
+        {%- for pr in led %}
+        {%- assign prog = pr.program -%}{%- if page.lang == 'en' and pr.program_en %}{% assign prog = pr.program_en %}{% endif %}
+        <li><span class="project__prog">{{ prog }}</span>{% if pr.period %} · {{ pr.period }}{% endif %}<br>{% if pr.url %}<a href="{{ pr.url }}" target="_blank" rel="noopener">{% endif %}{% if page.lang == 'pl' %}{{ pr.title_pl }}{% else %}{{ pr.title_en }}{% endif %}{% if pr.url %}</a>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {%- endif %}
+  {%- if p.orcid != "" and site.data.publications_auto and site.data.publications_auto.size > 0 %}
+  {%- assign mine = "" | split: "" -%}
+  {%- for pub in site.data.publications_auto %}{% if pub.team_orcids contains p.orcid %}{% assign mine = mine | push: pub %}{% endif %}{% endfor -%}
+  {%- if mine.size > 0 %}
+  <section class="section">
+    <div class="wrap">
+      <h2>{{ t.person_pubs }}</h2>
+      <p class="muted">{{ t.person_pubs_note }}</p>
+      <div class="pubs pubs--flat"><ol class="pub-list">
+        {%- for pub in mine %}{% include pub-item.html p=pub show_year=true %}{% endfor %}
+      </ol></div>
+    </div>
+  </section>
+  {%- endif %}
+  {%- endif %}
+</div>

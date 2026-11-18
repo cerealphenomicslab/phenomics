@@ -26,7 +26,7 @@ contact:
   country_pl: Polska
   country_en: Poland
   phone: "+48 61 65 50 200"
-  email: office@igr.poznan.pl          # TODO: adres e-mail zespołu / kierownika
+  email: cerealphenomicslab@gmail.com
   institute_url: https://www.igr.poznan.pl
   instagram: https://www.instagram.com/cereal.phenomics.lab/
   instagram_handle: "@cereal.phenomics.lab"
@@ -47,6 +47,7 @@ highlight_authors:
   - Kempa M.
   - Szczepański S.
   - Michałek M.
+  - Bodzak M.
   - Maryniak D.
 
 markdown: kramdown
@@ -57,3 +58,12 @@ exclude:
   - Gemfile.lock
   - tools/
   - vendor/
+
+# Strony osobowe członków zespołu (CV) – pliki w folderze _osoby/
+collections:
+  osoby:
+    output: true
+
+defaults:
+  - scope: { type: osoby }
+    values: { layout: person, nav_ref: team }

@@ -36,5 +36,7 @@
   <div class="wrap site-footer__bottom">
     <span>© {{ site.time | date: '%Y' }} Cereal Phenomics Lab · <a href="{{ c.institute_url }}" target="_blank" rel="noopener">{{ t.institute }}</a></span>
     <span>{{ t.footer_note }}</span>
+    {%- if page.lang == 'en' %}{% assign u_priv = '/en/privacy/' %}{% assign u_acc = '/en/accessibility/' %}{% else %}{% assign u_priv = '/polityka-prywatnosci/' %}{% assign u_acc = '/deklaracja-dostepnosci/' %}{% endif %}
+    <span class="site-footer__legal"><a href="{{ u_acc | relative_url }}">{{ t.accessibility }}</a> · <a href="{{ u_priv | relative_url }}">{{ t.privacy }}</a></span>
   </div>
 </footer>

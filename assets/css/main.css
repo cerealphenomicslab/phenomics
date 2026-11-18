@@ -388,3 +388,10 @@ a.person__photo img { transition: transform .25s ease; }
 .map-consent { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--green-50); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 24px; }
 .map-consent p { margin: 0; max-width: 32em; font-size: .92rem; color: var(--ink-soft); }
 .map-consent .btn { cursor: pointer; border: 0; font: inherit; }
+
+/* Cała karta osoby jest klikalna (linki do profili zostają osobno klikalne) */
+.person { position: relative; }
+.person__name a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.person__icons, .person__profiles, .person__email { position: relative; z-index: 2; }
+.person:hover { box-shadow: var(--shadow); }
+.person:hover .person__name a { color: var(--green-600); text-decoration: underline; }

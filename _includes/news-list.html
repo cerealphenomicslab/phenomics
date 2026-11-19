@@ -16,7 +16,7 @@
     {%- endif %}
     <div class="news-card__img{% if n.image %} has-img{% elsif n.journal %} news-card__img--journal{% endif %}">
       {%- if n.image %}<img src="{{ '/assets/img/news/' | append: n.image | relative_url }}" alt="" loading="lazy">
-      {%- elsif jlogo %}<img class="news-card__jlogo" src="{{ jlogo | relative_url }}" alt="{{ n.journal }}" loading="lazy">
+      {%- elsif jlogo %}<img class="news-card__jlogo{% if jlogo contains '.webp' or jlogo contains '.jpg' %} news-card__jlogo--cover{% endif %}" src="{{ jlogo | relative_url }}" alt="{{ n.journal }}" loading="lazy">
       {%- elsif n.journal %}<span class="news-card__jname">{{ n.journal }}</span>
       {%- else %}{% include wheat.svg %}{% endif %}
     </div>

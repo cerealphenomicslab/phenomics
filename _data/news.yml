@@ -1,7 +1,7 @@
 # Aktualności (najnowsze na górze).
 # image: plik w assets/img/news/ (opcjonalnie), link: adres "czytaj dalej" (opcjonalnie, np. DOI)
-# journal: nazwa czasopisma przy wpisach o nowych pracach – na karcie pojawi się logo z assets/img/journals/<nazwa-czasopisma>.png
-#   (np. plant-and-soil.png); dopóki pliku nie ma, wyświetla się nazwa czasopisma
+# journal: nazwa czasopisma przy wpisach o nowych pracach – na karcie pojawi się logo z assets/img/journals/<nazwa-czasopisma>:
+#   logo jako .png/.svg, okładka jako .webp/.jpg (np. plant-and-soil.webp); dopóki pliku nie ma, wyświetla się nazwa czasopisma
 # placeholder: true -> etykieta "przykład"; teksty w [nawiasach] do uzupełnienia
 # Osoby zawsze z tytułem naukowym i nazwiskiem (np. dr. inż. Sebastiana Szczepańskiego).
 - date: 2026-11-08

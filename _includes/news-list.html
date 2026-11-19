@@ -4,8 +4,21 @@
 <ul class="news-grid">
   {%- for n in items %}
   <li class="news-card">
-    <div class="news-card__img{% if n.image %} has-img{% endif %}">
-      {%- if n.image %}<img src="{{ '/assets/img/news/' | append: n.image | relative_url }}" alt="" loading="lazy">{% else %}{% include wheat.svg %}{% endif %}
+    {%- assign jlogo = nil -%}
+    {%- if n.journal and n.image == nil -%}
+      {%- assign jslug = n.journal | slugify -%}
+      {%- assign jexts = "png,svg,jpg,webp" | split: "," -%}
+      {%- for ext in jexts -%}
+        {%- assign jpath = '/assets/img/journals/' | append: jslug | append: '.' | append: ext -%}
+        {%- assign jfound = site.static_files | where: "path", jpath | first -%}
+        {%- if jfound and jlogo == nil %}{% assign jlogo = jpath %}{% endif -%}
+      {%- endfor -%}
+    {%- endif %}
+    <div class="news-card__img{% if n.image %} has-img{% elsif n.journal %} news-card__img--journal{% endif %}">
+      {%- if n.image %}<img src="{{ '/assets/img/news/' | append: n.image | relative_url }}" alt="" loading="lazy">
+      {%- elsif jlogo %}<img class="news-card__jlogo" src="{{ jlogo | relative_url }}" alt="{{ n.journal }}" loading="lazy">
+      {%- elsif n.journal %}<span class="news-card__jname">{{ n.journal }}</span>
+      {%- else %}{% include wheat.svg %}{% endif %}
     </div>
     <div class="news-card__body">
       <p class="news-card__date"><time datetime="{{ n.date | date: '%Y-%m-%d' }}">{% include date.html d=n.date %}</time>{% if n.placeholder %} <span class="badge badge--ph">{{ t.example }}</span>{% endif %}</p>

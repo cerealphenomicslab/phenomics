@@ -1,19 +1,24 @@
 # Aktualności (najnowsze na górze).
 # image: plik w assets/img/news/ (opcjonalnie), link: adres "czytaj dalej" (opcjonalnie, np. DOI)
+# journal: nazwa czasopisma przy wpisach o nowych pracach – na karcie pojawi się logo z assets/img/journals/<nazwa-czasopisma>.png
+#   (np. plant-and-soil.png); dopóki pliku nie ma, wyświetla się nazwa czasopisma
 # placeholder: true -> etykieta "przykład"; teksty w [nawiasach] do uzupełnienia
 # Osoby zawsze z tytułem naukowym i nazwiskiem (np. dr. inż. Sebastiana Szczepańskiego).
 - date: 2026-11-08
+  journal: Plant and Soil
   title_pl: Praca o melatoninie przyjęta do druku w Plant and Soil
   title_en: Melatonin paper accepted in Plant and Soil
   text_pl: Praca dr. inż. Sebastiana Szczepańskiego i współpracowników o wpływie melatoniny na architekturę systemu korzeniowego jęczmienia została przyjęta do druku w czasopiśmie Plant and Soil. To efekt badań prowadzonych w projekcie NCN OPUS 18 (2019/35/B/NZ9/00208).
   text_en: The paper by Dr. Sebastian Szczepański and co-workers on the effect of melatonin on barley root system architecture has been accepted for publication in Plant and Soil. It presents results of the NCN OPUS 18 project (2019/35/B/NZ9/00208).
 - date: 2026-09-01
+  journal: Scientific Reports
   title_pl: Nowa publikacja w Scientific Reports
   title_en: New paper in Scientific Reports
   text_pl: W Scientific Reports ukazała się publikacja dr. Michała Kempy i współpracowników, przygotowana w ramach projektu NCN OPUS 21 (2021/41/B/NZ9/02576).
   text_en: A paper by Dr. Michał Kempa and co-workers, based on research from the NCN OPUS 21 project (2021/41/B/NZ9/02576), has been published in Scientific Reports.
   link: https://doi.org/10.1038/s41598-026-69888-3
 - date: 2026-02-02
+  journal: Metabolomics
   title_pl: Nowa publikacja w czasopiśmie Metabolomics
   title_en: New paper in Metabolomics
   text_pl: W czasopiśmie Metabolomics ukazała się praca dr. Michała Kempy i współpracowników poświęcona strategiom metabolicznym, którymi jęczmień odpowiada na stres, oraz ich skutkom dla fenotypu roślin.
